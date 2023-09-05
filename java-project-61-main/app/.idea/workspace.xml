@@ -4,15 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a72d580-3f95-4aae-a7ea-0a7b2af2ad44" name="Changes" comment="make Makefile">
-      <change beforePath="$PROJECT_DIR$/../.github/workflows/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.github/workflows/hexlet-check.yml" beforeDir="false" />
+    <list default="true" id="1a72d580-3f95-4aae-a7ea-0a7b2af2ad44" name="Changes" comment="add project files">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.github/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="ExternalProjectsData">
     <projectState path="$PROJECT_DIR$">
       <ProjectState />
@@ -125,6 +126,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app\.github" />
       <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app" />
       <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app\build" />
     </key>
