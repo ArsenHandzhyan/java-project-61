@@ -59,10 +59,15 @@ public class Calc {
 
         String input = sc.nextLine();
 
-        if (count < 2) {
+        if (count <= 2) {
             if (result.equals(input)) {
                 System.out.println("Correct!");
-                game(++count);
+                if (count == 2) {
+                    Engine.congratulations();
+                    Engine.gameEngine();
+                } else {
+                    game(++count);
+                }
             } else {
                 System.out.println("Your answer: " + input);
                 System.out.println("'" + input + "'" + "is wrong answer ;(. Correct answer was" + "'" + result + "'");
@@ -70,13 +75,11 @@ public class Calc {
                 Engine.gameEngine();
             }
         } else {
-            Engine.congratulations();
             Engine.gameEngine();
         }
     }
-
-
 }
+
 
 
 

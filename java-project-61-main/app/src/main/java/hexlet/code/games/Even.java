@@ -31,17 +31,21 @@ public class Even {
         System.out.println("Question: " + evenNum);
         String input = sc.nextLine();
         String even = evenNumber(evenNum);
-        if (count < 2) {
+        if (count <= 2) {
             if (input.equals(even)) {
                 System.out.println("Correct!");
-                game(++count);
+                if (count == 2) {
+                    Engine.congratulations();
+                    Engine.gameEngine();
+                } else {
+                    game(++count);
+                }
             } else {
                 System.out.println("'yes' is wrong answer ;(. Correct answer was 'no'.");
                 Engine.again();
                 Engine.gameEngine();
             }
         } else {
-            Engine.congratulations();
             Engine.gameEngine();
         }
     }
