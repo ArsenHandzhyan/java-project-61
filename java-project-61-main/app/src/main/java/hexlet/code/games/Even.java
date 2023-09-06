@@ -1,7 +1,9 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Generate;
+
+import static hexlet.code.Generate.randomGen;
+import static hexlet.code.Generate.string;
 
 public class Even {
 
@@ -19,9 +21,9 @@ public class Even {
     }
 
     public static void game(int count) {
-        int evenNum = Generate.randomGen(101) + 1;
+        int evenNum = randomGen(101) + 1;
         System.out.println("Question: " + evenNum);
-        String input = Generate.string();
+        String input = string();
         String even = evenNumber(evenNum);
         if (count <= 2) {
             if (input.equals(even)) {

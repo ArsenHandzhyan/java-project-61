@@ -3,6 +3,9 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Generate;
 
+import static hexlet.code.Generate.randomGen;
+import static hexlet.code.Generate.string;
+
 public class Progression implements Generate {
 
     public static void gameStart() {
@@ -15,7 +18,7 @@ public class Progression implements Generate {
         String result = results[0];
         String hiddenNumber = results[1];
         System.out.println("Question: " + result);
-        String input = Generate.string();
+        String input = string();
         if (count <= 2) {
             if (input.equals(hiddenNumber)) {
                 System.out.println("Correct!");
@@ -54,10 +57,10 @@ public class Progression implements Generate {
     }
 
     public static int[] generateProgression() {
-        int length = Generate.randomGen(6) + 5; // Генерация случайной длины от 5 до 10
+        int length = randomGen(6) + 5; // Генерация случайной длины от 5 до 10
         int[] progression = new int[length];
-        int start = Generate.randomGen(100); // Генерация случайного начального числа
-        int step = Generate.randomGen(25) + 1;
+        int start = randomGen(100); // Генерация случайного начального числа
+        int step = randomGen(25) + 1;
         for (int i = 0; i < length; i++) {
             progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
         }

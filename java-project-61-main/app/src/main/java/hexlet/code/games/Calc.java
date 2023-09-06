@@ -3,6 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Generate;
 
+import static hexlet.code.Generate.randomGen;
+import static hexlet.code.Generate.string;
 
 public class Calc implements Generate {
 
@@ -13,7 +15,7 @@ public class Calc implements Generate {
 
 
     public static String generateSign() {
-        int sign = Generate.randomGen(3);
+        int sign = randomGen(3);
 
         return switch (sign) {
             case 1 -> "-";
@@ -40,8 +42,8 @@ public class Calc implements Generate {
     }
 
     public static void game(int count) {
-        int num1 = Generate.randomGen(50) + 1;
-        int num2 = Generate.randomGen(50) + 1;
+        int num1 = randomGen(50) + 1;
+        int num2 = randomGen(50) + 1;
 
         String sign = generateSign();
         String expression = num1 + " " + sign + " " + num2;
@@ -49,7 +51,7 @@ public class Calc implements Generate {
 
         System.out.println("Question: " + expression);
 
-        String input = Generate.string();
+        String input = string();
 
         if (count <= 2) {
             if (result.equals(input)) {

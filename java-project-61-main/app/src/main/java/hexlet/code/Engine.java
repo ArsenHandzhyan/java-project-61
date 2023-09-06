@@ -7,6 +7,8 @@ import hexlet.code.games.GSD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
+import static hexlet.code.Generate.string;
+
 
 public class Engine implements Generate {
 
@@ -17,7 +19,7 @@ public class Engine implements Generate {
     }
 
     public static void greet1() {
-        String name = Generate.string();
+        String name = string();
         System.out.println("Hello, " + name + "!\n");
         name1 = name;
     }
@@ -44,37 +46,51 @@ public class Engine implements Generate {
                 0 - Exit
                 """);
         System.out.print("Your choice: ");
+        String input = string();
+        if (!input.equals("0")
+                && !input.equals("1")
+                && !input.equals("2")
+                && !input.equals("3")
+                && !input.equals("4")
+                && !input.equals("5")
+                && !input.equals("6")) {
 
-        switch (Generate.string()) {
-            case "1" -> {
-                Greet.gameStart();
-                Engine.gameEngine();
+            System.out.println("Введите корректное значение");
+
+            switch (input) {
+                case "1" -> {
+                    Greet.gameStart();
+                    Engine.gameEngine();
+                }
+                case "2" -> {
+                    greet();
+                    Even.gameStart();
+                }
+                case "3" -> {
+                    greet();
+                    Calc.gameStart();
+                }
+                case "4" -> {
+                    greet();
+                    GSD.gameStart();
+                }
+                case "5" -> {
+                    greet();
+                    Progression.gameStart();
+                }
+                case "6" -> {
+                    greet();
+                    Prime.gameStart();
+                }
+                case "0" -> {
+                    System.out.println("\nBay!");
+                    System.exit(0);
+                }
+                default -> Engine.gameEngine();
             }
-            case "2" -> {
-                greet();
-                Even.gameStart();
-            }
-            case "3" -> {
-                greet();
-                Calc.gameStart();
-            }
-            case "4" -> {
-                greet();
-                GSD.gameStart();
-            }
-            case "5" -> {
-                greet();
-                Progression.gameStart();
-            }
-            case "6" -> {
-                greet();
-                Prime.gameStart();
-            }
-            case "0" -> {
-                System.out.println("\nBay!");
-                System.exit(0);
-            }
-            default -> Engine.gameEngine();
+        } else {
+            System.out.println("Вы ввели корректное значение: от 1 до 6 для выбора игры и 0 для выхода!\n");
+            gameEngine();
         }
     }
 }

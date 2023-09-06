@@ -3,6 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Generate;
 
+import static hexlet.code.Generate.randomGen;
+import static hexlet.code.Generate.string;
 
 public class GSD implements Generate {
 
@@ -12,10 +14,10 @@ public class GSD implements Generate {
     }
 
     public static void game(int count) {
-        int gcd = Generate.randomGen(50); // Ограничение общего делителя от 1 до 50
+        int gcd = randomGen(50); // Ограничение общего делителя от 1 до 50
 
-        int multiplier1 = Generate.randomGen(20); // Генерируем вспомогательные множители для чисел
-        int multiplier2 = Generate.randomGen(20);
+        int multiplier1 = randomGen(20); // Генерируем вспомогательные множители для чисел
+        int multiplier2 = randomGen(20);
 
         int num1 = gcd * multiplier1;  // Рассчитываем числа с учетом общего делителя
         int num2 = gcd * multiplier2;
@@ -25,7 +27,7 @@ public class GSD implements Generate {
 
         System.out.println("Question: " + expression);
 
-        String input = Generate.string();
+        String input = string();
 
         if (count <= 2) {
             if (result.equals(input)) {

@@ -3,6 +3,9 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Generate;
 
+import static hexlet.code.Generate.randomGen;
+import static hexlet.code.Generate.string;
+
 public class Prime implements Generate {
 
     public static void gameStart() {
@@ -11,12 +14,12 @@ public class Prime implements Generate {
     }
 
     public static void game(int count) {
-        int results = Generate.randomGen(501) + 1;
+        int results = randomGen(501) + 1;
         String result = Integer.toString(results);
         boolean correctAnswer = isSimple(results);
         String correctAnswerString = String.valueOf(correctAnswer);
         System.out.println("Question: " + result);
-        String input = Generate.string();
+        String input = string();
         if (input.equals("yes")) {
             input = "true";
         } else if (input.equals("no")) {
