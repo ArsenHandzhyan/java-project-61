@@ -17,10 +17,6 @@ application {
     mainClass = 'hexlet.code.App'
 }
 
-javafx {
-    version = '18.0.2'
-}
-
 dependencies {
 
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
@@ -31,5 +27,8 @@ test {
     useJUnitPlatform()
 }
 
-
-
+jar {
+    manifest {
+        attributes 'Main-Class': 'hexlet.code.App'
+    }
+}

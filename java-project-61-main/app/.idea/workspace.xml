@@ -4,7 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a72d580-3f95-4aae-a7ea-0a7b2af2ad44" name="Changes" comment="fix more problems">
+    <list default="true" id="1a72d580-3f95-4aae-a7ea-0a7b2af2ad44" name="Changes" comment="fix Makefile">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.github/workflows/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.github/workflows/hexlet-check.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/ChatGPTCopilotChannelManager.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/codeStyles/Project.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/gradle.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/jarRepositories.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/java-project-61.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
@@ -12,23 +27,26 @@
       <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/App.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/Engine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Calc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Calc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Cli.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Cli.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Even.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Even.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/GSD.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/GSD.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Prime.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Prime.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Progression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Progression.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/Engine.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Calc.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Calc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Even.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Even.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/GSD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/GSD.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/Engine.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Calc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Even.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Even.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/GSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/GSD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Prime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Prime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Progression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Progression.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="ChangesViewManager" show_ignored="true" />
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
@@ -138,6 +156,7 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/hexlet/code/games/GSD.java" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" root0="SKIP_INSPECTION" />
   </component>
   <component name="Make.Settings">
     <option name="path" value="C:\Program Files (x86)\GnuWin32\bin\make.exe" />
@@ -159,25 +178,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Program Files (x86)/GnuWin32/bin/make.exe&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.54022986&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.make&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/java-project-61-main",
+    "project.structure.last.edited": "SDKs",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.54022986",
+    "settings.editor.selected.configurable": "preferences.startup.tasks"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;ChangesTree.GroupingKeys&quot;: [
-      &quot;directory&quot;,
-      &quot;module&quot;
+  "keyToStringList": {
+    "ChangesTree.GroupingKeys": [
+      "directory",
+      "module"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app" />
@@ -188,20 +207,7 @@
       <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app\build" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="hexlet.code.App" />
-      <module name="app.main" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="hexlet.code.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
+  <component name="RunManager" selected="Gradle.app [installDist]">
     <configuration name="app [assembleDist]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -214,6 +220,69 @@
         <option name="taskNames">
           <list>
             <option value="assembleDist" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="app [build]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="build" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="app [clean]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="clean" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
+    <configuration name="app [distZip]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value="distZip" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -244,54 +313,34 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="app [run]" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value="run" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>true</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="Makefile" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile">
       <makefile filename="C:\Users\User\IdeaProjects\java-project-61-main\app\Makefile" target="" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
     </configuration>
-    <configuration name="run-dist" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" temporary="true">
-      <makefile filename="$PROJECT_DIR$/Makefile" target="run-dist" workingDirectory="" arguments="">
+    <configuration name="Unnamed" type="MAKEFILE_TARGET_RUN_CONFIGURATION" factoryName="Makefile" nameIsGenerated="true">
+      <makefile filename="" target="" workingDirectory="" arguments="">
         <envs />
       </makefile>
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Application.App" />
-      <item itemvalue="Gradle.app [run]" />
-      <item itemvalue="Gradle.app [assembleDist]" />
+      <item itemvalue="Gradle.app [build]" />
+      <item itemvalue="Gradle.app [clean]" />
+      <item itemvalue="Gradle.app [distZip]" />
       <item itemvalue="Gradle.app [installDist]" />
+      <item itemvalue="Gradle.app [assembleDist]" />
       <item itemvalue="Makefile Target.Makefile" />
-      <item itemvalue="Makefile Target.run-dist" />
+      <item itemvalue="Makefile Target.Unnamed" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Makefile Target.run-dist" />
-        <item itemvalue="Application.App" />
-        <item itemvalue="Gradle.app [run]" />
-        <item itemvalue="Gradle.app [assembleDist]" />
         <item itemvalue="Gradle.app [installDist]" />
+        <item itemvalue="Gradle.app [assembleDist]" />
+        <item itemvalue="Gradle.app [build]" />
+        <item itemvalue="Gradle.app [clean]" />
+        <item itemvalue="Gradle.app [distZip]" />
       </list>
     </recent_temporary>
   </component>
@@ -346,7 +395,14 @@
       <option name="project" value="LOCAL" />
       <updated>1693964802172</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="fix more problems">
+      <created>1694014754734</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1694014754734</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
@@ -382,7 +438,9 @@
     <MESSAGE value="add Progression game" />
     <MESSAGE value="add Prime game" />
     <MESSAGE value="setting up the generator" />
-    <option name="LAST_COMMIT_MESSAGE" value="setting up the generator" />
+    <MESSAGE value="fix more problems" />
+    <MESSAGE value="fix Makefile" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix Makefile" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

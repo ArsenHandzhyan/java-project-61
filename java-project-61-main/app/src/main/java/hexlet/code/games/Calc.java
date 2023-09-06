@@ -13,7 +13,6 @@ public class Calc implements Generate {
         game(0);
     }
 
-
     public static String generateSign() {
         int sign = randomGen(3);
 
