@@ -7,7 +7,6 @@ import hexlet.code.games.GSD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
-import java.util.Scanner;
 
 public class Engine implements Generate {
 
@@ -18,7 +17,7 @@ public class Engine implements Generate {
     }
 
     public static void greet1() {
-        String name = Generate.nameS();
+        String name = Generate.string();
         System.out.println("Hello, " + name + "!\n");
         name1 = name;
     }
@@ -45,31 +44,37 @@ public class Engine implements Generate {
                 0 - Exit
                 """);
         System.out.print("Your choice: ");
-        Scanner sc = new Scanner(System.in);
-        int inputNum = sc.nextInt();
-        if (inputNum == 1) {
-            Greet.gameStart();
-            Engine.gameEngine();
-        } else if (inputNum == 2) {
-            greet();
-            Even.gameStart();
-        } else if (inputNum == 3) {
-            greet();
-            Calc.gameStart();
-        } else if (inputNum == 4) {
-            greet();
-            GSD.gameStart();
-        } else if (inputNum == 5) {
-            greet();
-            Progression.gameStart();
-        } else if (inputNum == 6) {
-            greet();
-            Prime.gameStart();
-        } else if (inputNum == 0) {
-            System.out.println("\nBay!");
-            System.exit(0);
-        } else {
-            Engine.gameEngine();
+
+        switch (Generate.string()) {
+            case "1" -> {
+                Greet.gameStart();
+                Engine.gameEngine();
+            }
+            case "2" -> {
+                greet();
+                Even.gameStart();
+            }
+            case "3" -> {
+                greet();
+                Calc.gameStart();
+            }
+            case "4" -> {
+                greet();
+                GSD.gameStart();
+            }
+            case "5" -> {
+                greet();
+                Progression.gameStart();
+            }
+            case "6" -> {
+                greet();
+                Prime.gameStart();
+            }
+            case "0" -> {
+                System.out.println("\nBay!");
+                System.exit(0);
+            }
+            default -> Engine.gameEngine();
         }
     }
 }

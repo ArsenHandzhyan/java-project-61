@@ -3,10 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Generate;
 
-import java.util.Scanner;
-
 public class Prime implements Generate {
-    static Scanner sc = new Scanner(System.in);
 
     public static void gameStart() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
@@ -19,7 +16,7 @@ public class Prime implements Generate {
         boolean correctAnswer = isSimple(results);
         String correctAnswerString = String.valueOf(correctAnswer);
         System.out.println("Question: " + result);
-        String input = sc.nextLine();
+        String input = Generate.string();
         if (input.equals("yes")) {
             input = "true";
         } else if (input.equals("no")) {

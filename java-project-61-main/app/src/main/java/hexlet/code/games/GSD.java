@@ -3,11 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Generate;
 
-import java.util.Scanner;
 
 public class GSD implements Generate {
-
-    static Scanner sc = new Scanner(System.in);
 
     public static void gameStart() {
         System.out.println("Find the greatest common divisor of given numbers.");
@@ -17,19 +14,18 @@ public class GSD implements Generate {
     public static void game(int count) {
         int gcd = Generate.randomGen(50); // Ограничение общего делителя от 1 до 50
 
-        // Генерируем вспомогательные множители для чисел
-        int multiplier1 = Generate.randomGen(20);
+        int multiplier1 = Generate.randomGen(20); // Генерируем вспомогательные множители для чисел
         int multiplier2 = Generate.randomGen(20);
 
-        // Рассчитываем числа с учетом общего делителя
-        int num1 = gcd * multiplier1;
+        int num1 = gcd * multiplier1;  // Рассчитываем числа с учетом общего делителя
         int num2 = gcd * multiplier2;
+
         String expression = num1 + " " + num2;
         String result = Integer.toString(findGCD(num1, num2));
 
         System.out.println("Question: " + expression);
 
-        String input = sc.nextLine();
+        String input = Generate.string();
 
         if (count <= 2) {
             if (result.equals(input)) {

@@ -3,11 +3,8 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Generate;
 
-import java.util.Scanner;
 
 public class Calc implements Generate {
-
-    static Scanner sc = new Scanner(System.in);
 
     public static void gameStart() {
         System.out.println("What is the result of the expression?");
@@ -52,7 +49,7 @@ public class Calc implements Generate {
 
         System.out.println("Question: " + expression);
 
-        String input = sc.nextLine();
+        String input = Generate.string();
 
         if (count <= 2) {
             if (result.equals(input)) {

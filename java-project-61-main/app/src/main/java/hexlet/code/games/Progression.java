@@ -3,10 +3,7 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Generate;
 
-import java.util.Scanner;
-
 public class Progression implements Generate {
-    static Scanner sc = new Scanner(System.in);
 
     public static void gameStart() {
         System.out.println("What number is missing in the progression?");
@@ -18,7 +15,7 @@ public class Progression implements Generate {
         String result = results[0];
         String hiddenNumber = results[1];
         System.out.println("Question: " + result);
-        String input = sc.nextLine();
+        String input = Generate.string();
         if (count <= 2) {
             if (input.equals(hiddenNumber)) {
                 System.out.println("Correct!");

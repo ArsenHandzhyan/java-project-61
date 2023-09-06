@@ -4,7 +4,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public interface Generate {
-    static String nameS() {
+    static String string() {
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
