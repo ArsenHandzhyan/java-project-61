@@ -10,7 +10,7 @@ public class Calc implements Generate {
     static Scanner sc = new Scanner(System.in);
 
     public static void gameStart() {
-        System.out.println("What is the result of the expression?");
+        System.out.println("\nWhat is the result of the expression?");
         game(0);
     }
 
@@ -43,8 +43,8 @@ public class Calc implements Generate {
     }
 
     public static void game(int count) {
-        int num1 = Generate.randomGen(20);
-        int num2 = Generate.randomGen(20);
+        int num1 = Generate.randomGen(50) + 1;
+        int num2 = Generate.randomGen(50) + 1;
 
         String sign = generateSign();
         String expression = num1 + " " + sign + " " + num2;

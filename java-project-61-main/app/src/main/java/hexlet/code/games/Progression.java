@@ -9,7 +9,7 @@ public class Progression implements Generate {
     static Scanner sc = new Scanner(System.in);
 
     public static void gameStart() {
-        System.out.println("What number is missing in the progression?");
+        System.out.println("\nWhat number is missing in the progression?");
         game(0);
     }
 
@@ -60,7 +60,7 @@ public class Progression implements Generate {
         int length = Generate.randomGen(6) + 5; // Генерация случайной длины от 5 до 10
         int[] progression = new int[length];
         int start = Generate.randomGen(100); // Генерация случайного начального числа
-        int step = Generate.randomGen(16) + 1;
+        int step = Generate.randomGen(25) + 1;
         for (int i = 0; i < length; i++) {
             progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
         }

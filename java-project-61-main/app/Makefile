@@ -1,4 +1,4 @@
 .PHONY: run-dist
 
 run-dist:
-	./build/install/app/bin/app
+	C:/Users/User/IdeaProjects/java-project-61-main/app/build/install/app/bin/app

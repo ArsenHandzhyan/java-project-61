@@ -10,16 +10,16 @@ public class GSD implements Generate {
     static Scanner sc = new Scanner(System.in);
 
     public static void gameStart() {
-        System.out.println("Find the greatest common divisor of given numbers.");
+        System.out.println("\nFind the greatest common divisor of given numbers.");
         game(0);
     }
 
     public static void game(int count) {
-        int gcd = Generate.randomGen(50); // Ограничение общего делителя от 1 до 50
+        int gcd = Generate.randomGen(21) + 1; // Ограничение общего делителя от 1 до 50
 
         // Генерируем вспомогательные множители для чисел
-        int multiplier1 = Generate.randomGen(20);
-        int multiplier2 = Generate.randomGen(20);
+        int multiplier1 = Generate.randomGen(50) + 1;
+        int multiplier2 = Generate.randomGen(50) + 1;
 
         // Рассчитываем числа с учетом общего делителя
         int num1 = gcd * multiplier1;

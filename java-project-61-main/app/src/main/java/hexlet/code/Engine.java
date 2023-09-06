@@ -12,14 +12,14 @@ import java.util.Scanner;
 public class Engine implements Generate {
 
     public static void greet() {
-        System.out.println("Welcome to the Brain Games!");
-        System.out.print("May I have your name? ");
+        System.out.println("\nWelcome to the Brain Games!");
+        System.out.print("May I have your name?  ");
         greet1();
     }
 
     public static void greet1() {
         String name = Generate.nameS();
-        System.out.println("Hello, " + name + "!\n");
+        System.out.println("Hello, " + name + "!");
         name1 = name;
     }
 
@@ -45,31 +45,42 @@ public class Engine implements Generate {
                 0 - Exit
                 """);
         System.out.print("Your choice: ");
-        Scanner sc = new Scanner(System.in);
-        int inputNum = sc.nextInt();
-        if (inputNum == 1) {
-            Greet.gameStart();
-            Engine.gameEngine();
-        } else if (inputNum == 2) {
-            greet();
-            Even.gameStart();
-        } else if (inputNum == 3) {
-            greet();
-            Calc.gameStart();
-        } else if (inputNum == 4) {
-            greet();
-            GSD.gameStart();
-        } else if (inputNum == 5) {
-            greet();
-            Progression.gameStart();
-        } else if (inputNum == 6) {
-            greet();
-            Prime.gameStart();
-        } else if (inputNum == 0) {
-            System.out.println("\nBay!");
-            System.exit(0);
-        } else {
-            Engine.gameEngine();
+        try (Scanner sc = new Scanner(System.in)) {
+            String inputNum = sc.nextLine();
+            switch (inputNum) {
+                case "1" -> {
+                    Greet.gameStart();
+                    Engine.gameEngine();
+                }
+                case "2" -> {
+                    greet();
+                    Even.gameStart();
+                }
+                case "3" -> {
+                    greet();
+                    Calc.gameStart();
+                }
+                case "4" -> {
+                    greet();
+                    GSD.gameStart();
+                }
+                case "5" -> {
+                    greet();
+                    Progression.gameStart();
+                }
+                case "6" -> {
+                    greet();
+                    Prime.gameStart();
+                }
+                case "0" -> {
+                    System.out.println("\nBay!");
+                    System.exit(0);
+                }
+                default -> {
+                    System.out.println("input invalid enter \"0\" - \"6\"");
+                    Engine.gameEngine();
+                }
+            }
         }
     }
 }

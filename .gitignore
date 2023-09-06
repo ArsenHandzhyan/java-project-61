@@ -1,7 +1,4 @@
-/java-project-61-main/.idea/.name
-/java-project-61-main/.idea/compiler.xml
-/java-project-61-main/.idea/gradle.xml
-/java-project-61-main/.idea/jarRepositories.xml
-/java-project-61-main/.idea/misc.xml
-/java-project-61-main/.idea/vcs.xml
-/java-project-61-main/.idea/workspace.xml
+java-project-61-main/.idea/
+java-project-61-main/app/.gradle/
+.gradle/
+.idea/
