@@ -1,27 +1,22 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Generate;
 
-import java.util.Random;
 import java.util.Scanner;
 
-public class Calc {
+public class Calc implements Generate {
 
     static Scanner sc = new Scanner(System.in);
 
-    public static void gameStart1() {
+    public static void gameStart() {
         System.out.println("What is the result of the expression?");
         game(0);
     }
 
-    public static int randomGen() {
-        Random random = new Random();
-        return random.nextInt(20);
-    }
 
     public static String generateSign() {
-        Random rand = new Random();
-        int sign = rand.nextInt(3);
+        int sign = Generate.randomGen(3);
 
         return switch (sign) {
             case 1 -> "-";
@@ -48,8 +43,8 @@ public class Calc {
     }
 
     public static void game(int count) {
-        int num1 = randomGen();
-        int num2 = randomGen();
+        int num1 = Generate.randomGen(20);
+        int num2 = Generate.randomGen(20);
 
         String sign = generateSign();
         String expression = num1 + " " + sign + " " + num2;

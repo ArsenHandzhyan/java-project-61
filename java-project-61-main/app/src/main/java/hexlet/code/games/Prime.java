@@ -8,19 +8,18 @@ import java.util.Scanner;
 public class Prime implements Generate {
     static Scanner sc = new Scanner(System.in);
 
-    public static void gameStart1() {
+    public static void gameStart() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
         game(0);
     }
 
     public static void game(int count) {
-        int results = Generate.randomGen();
+        int results = Generate.randomGen(1000);
         String result = Integer.toString(results);
         boolean correctAnswer = isSimple(results);
         String correctAnswerString = String.valueOf(correctAnswer);
         System.out.println("Question: " + result);
         String input = sc.nextLine();
-
         if (input.equals("yes")) {
             input = "true";
         } else if (input.equals("no")) {

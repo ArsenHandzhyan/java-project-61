@@ -8,7 +8,7 @@ import java.util.Scanner;
 public class Even {
     static Scanner sc = new Scanner(System.in);
 
-    public static void gameStart1() {
+    public static void gameStart() {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
         game(0);
     }

@@ -3,25 +3,23 @@ package hexlet.code.games;
 import hexlet.code.Engine;
 import hexlet.code.Generate;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class GSD implements Generate {
 
     static Scanner sc = new Scanner(System.in);
 
-    public static void gameStart1() {
+    public static void gameStart() {
         System.out.println("Find the greatest common divisor of given numbers.");
         game(0);
     }
 
     public static void game(int count) {
-        Random rand = new Random(20);
-        int gcd = rand.nextInt(50); // Ограничение общего делителя от 1 до 50
+        int gcd = Generate.randomGen(50); // Ограничение общего делителя от 1 до 50
 
         // Генерируем вспомогательные множители для чисел
-        int multiplier1 = Generate.randomGen();
-        int multiplier2 = Generate.randomGen();
+        int multiplier1 = Generate.randomGen(20);
+        int multiplier2 = Generate.randomGen(20);
 
         // Рассчитываем числа с учетом общего делителя
         int num1 = gcd * multiplier1;

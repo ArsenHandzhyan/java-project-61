@@ -9,9 +9,9 @@ public interface Generate {
         return sc.nextLine();
     }
 
-    static int randomGen() {
+    static int randomGen(int bound) {
         Random rand = new Random();
-        return rand.nextInt(50);
+        return rand.nextInt(bound);
     }
 }
 
