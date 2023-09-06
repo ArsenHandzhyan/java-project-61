@@ -1,11 +1,12 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
+import hexlet.code.Generate;
 
 import java.util.Random;
 import java.util.Scanner;
 
-public class Progression {
+public class Progression implements Generate {
     static Scanner sc = new Scanner(System.in);
 
     public static void gameStart1() {
@@ -31,7 +32,7 @@ public class Progression {
             } else {
                 System.out.println("Your answer: " + input);
                 System.out.print("'" + input + "'" + "is wrong answer ;(. Correct answer was");
-                System.out.print("'" + hiddenNumber + "'");
+                System.out.println("'" + hiddenNumber + "'");
                 Engine.again();
                 Engine.gameEngine();
             }
@@ -62,9 +63,9 @@ public class Progression {
         int length = random.nextInt(6) + 5; // Генерация случайной длины от 5 до 10
         int[] progression = new int[length];
         int start = random.nextInt(100); // Генерация случайного начального числа
-
+        int step = random.nextInt(10) + 1; // Генерация случайного шага от 1 до 10
         for (int i = 0; i < length; i++) {
-            progression[i] = start + (i * 3); // Шаг арифметической прогрессии равен 3
+            progression[i] = start + (i * step); // Шаг арифметической прогрессии равен 3
         }
 
         return progression;

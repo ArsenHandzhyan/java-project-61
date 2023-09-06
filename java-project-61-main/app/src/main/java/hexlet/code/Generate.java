@@ -8,6 +8,7 @@ public interface Generate {
         Scanner sc = new Scanner(System.in);
         return sc.nextLine();
     }
+
     static int randomGen() {
         Random rand = new Random();
         return rand.nextInt(50);
