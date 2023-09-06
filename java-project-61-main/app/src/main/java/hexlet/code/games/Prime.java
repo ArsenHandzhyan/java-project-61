@@ -6,12 +6,12 @@ import hexlet.code.Generate;
 public class Prime implements Generate {
 
     public static void gameStart() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
+        System.out.println("\nAnswer 'yes' if given number is prime. Otherwise answer 'no'.");
         game(0);
     }
 
     public static void game(int count) {
-        int results = Generate.randomGen(1000);
+        int results = Generate.randomGen(501) + 1;
         String result = Integer.toString(results);
         boolean correctAnswer = isSimple(results);
         String correctAnswerString = String.valueOf(correctAnswer);
