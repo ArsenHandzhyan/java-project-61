@@ -32,3 +32,6 @@ jar {
         attributes 'Main-Class': 'hexlet.code.App'
     }
 }
+compileJava {
+    options.release = 18
+}

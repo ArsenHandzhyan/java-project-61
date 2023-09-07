@@ -14,10 +14,10 @@ public class GSD implements Generate {
     }
 
     public static void game(int count) {
-        int gcd = randomGen(50); // Ограничение общего делителя от 1 до 50
+        int gcd = randomGen(31) + 1; // Ограничение общего делителя от 1 до 50
 
-        int multiplier1 = randomGen(20); // Генерируем вспомогательные множители для чисел
-        int multiplier2 = randomGen(20);
+        int multiplier1 = randomGen(21) + 1; // Генерируем вспомогательные множители для чисел
+        int multiplier2 = randomGen(21) + 1;
 
         int num1 = gcd * multiplier1;  // Рассчитываем числа с учетом общего делителя
         int num2 = gcd * multiplier2;
