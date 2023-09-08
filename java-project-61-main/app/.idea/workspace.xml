@@ -4,43 +4,30 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a72d580-3f95-4aae-a7ea-0a7b2af2ad44" name="Changes" comment="fix Makefile">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.github/workflows/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.github/workflows/hexlet-check.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/ChatGPTCopilotChannelManager.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/codeStyles/Project.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/gradle.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/jarRepositories.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/java-project-61.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/misc.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/vcs.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../.idea/workspace.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/executionHistory/executionHistory.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.bin" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/7.5.1/fileHashes/fileHashes.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/buildOutputCleanup/buildOutputCleanup.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gradle/file-system.probe" beforeDir="false" afterPath="$PROJECT_DIR$/.gradle/file-system.probe" afterDir="false" />
+    <list default="true" id="1a72d580-3f95-4aae-a7ea-0a7b2af2ad44" name="Changes" comment="six Scanner problem">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/main/META-INF/MANIFEST.MF" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/bin/test/MANIFEST.MF" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/Makefile" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/App.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/App.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/Engine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/Generate.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Calc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Calc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Cli.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Cli.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Even.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Even.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/GSD.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/GSD.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Prime.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Prime.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Progression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Progression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/Engine.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/Generate.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Calc.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Calc.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Even.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Even.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/GSD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/GSD.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/Engine.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Generate.java" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Calc.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Even.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Even.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/GSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/GSD.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Prime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Prime.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Progression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Progression.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -155,6 +142,7 @@
     <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/src/main/java/hexlet/code/Engine.java" root0="SKIP_INSPECTION" />
     <setting file="file://$PROJECT_DIR$/src/main/java/hexlet/code/games/GSD.java" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/src/main/resources/META-INF/MANIFEST.MF" root0="SKIP_INSPECTION" />
   </component>
@@ -184,8 +172,8 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/java-project-61-main",
-    "project.structure.last.edited": "SDKs",
+    "last_opened_file_path": "C:/Users/User/IdeaProjects/java-project-61-main/app/src/main/java/hexlet/code",
+    "project.structure.last.edited": "Project",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.54022986",
     "settings.editor.selected.configurable": "preferences.startup.tasks"
@@ -202,6 +190,7 @@
       <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app\src\main\java\hexlet\code" />
       <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app\.github" />
       <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app" />
       <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app\build" />
@@ -440,7 +429,8 @@
     <MESSAGE value="setting up the generator" />
     <MESSAGE value="fix more problems" />
     <MESSAGE value="fix Makefile" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix Makefile" />
+    <MESSAGE value="six Scanner problem" />
+    <option name="LAST_COMMIT_MESSAGE" value="six Scanner problem" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

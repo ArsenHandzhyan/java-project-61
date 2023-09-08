@@ -1,12 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Generate;
 
-import static hexlet.code.Generate.randomGen;
-import static hexlet.code.Generate.string;
+import static hexlet.code.Engine.randomGen;
+import static hexlet.code.Engine.string;
 
-public class GSD implements Generate {
+public class GSD {
 
     public static void gameStart() {
         System.out.println("Find the greatest common divisor of given numbers.");

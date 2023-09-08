@@ -1,12 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Generate;
 
-import static hexlet.code.Generate.randomGen;
-import static hexlet.code.Generate.string;
+import static hexlet.code.Engine.randomGen;
+import static hexlet.code.Engine.string;
 
-public class Prime implements Generate {
+public class Prime {
 
     public static void gameStart() {
         System.out.println("\nAnswer 'yes' if given number is prime. Otherwise answer 'no'.");

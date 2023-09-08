@@ -1,12 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Generate;
 
-import static hexlet.code.Generate.randomGen;
-import static hexlet.code.Generate.string;
+import static hexlet.code.Engine.randomGen;
+import static hexlet.code.Engine.string;
 
-public class Calc implements Generate {
+public class Calc {
 
     public static void gameStart() {
         System.out.println("\nWhat is the result of the expression?");

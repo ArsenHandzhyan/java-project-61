@@ -1,12 +1,11 @@
 package hexlet.code.games;
 
 import hexlet.code.Engine;
-import hexlet.code.Generate;
 
-import static hexlet.code.Generate.randomGen;
-import static hexlet.code.Generate.string;
+import static hexlet.code.Engine.randomGen;
+import static hexlet.code.Engine.string;
 
-public class Progression implements Generate {
+public class Progression {
 
     public static void gameStart() {
         System.out.println("\nWhat number is missing in the progression?");
@@ -69,6 +68,6 @@ public class Progression implements Generate {
     }
 
     public static int hideElement(int[] progression) {
-        return Generate.randomGen(progression.length);
+        return randomGen(progression.length);
     }
 }

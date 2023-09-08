@@ -7,10 +7,20 @@ import hexlet.code.games.GSD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
-import static hexlet.code.Generate.string;
+import java.util.Random;
+import java.util.Scanner;
 
+public class Engine {
+    private static final Scanner SCANNER = new Scanner(System.in);
 
-public class Engine implements Generate {
+    public static String string() {
+        String name = SCANNER.nextLine();
+        return name;
+    }
+
+    public static int randomGen(int bound) {
+        return new Random().nextInt(bound);
+    }
 
     public static void greet() {
         System.out.println("Welcome to the Brain Games!");
@@ -89,5 +99,3 @@ public class Engine implements Generate {
         }
     }
 }
-
-

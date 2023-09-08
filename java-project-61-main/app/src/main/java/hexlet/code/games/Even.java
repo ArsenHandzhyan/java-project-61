@@ -2,8 +2,8 @@ package hexlet.code.games;
 
 import hexlet.code.Engine;
 
-import static hexlet.code.Generate.randomGen;
-import static hexlet.code.Generate.string;
+import static hexlet.code.Engine.randomGen;
+import static hexlet.code.Engine.string;
 
 public class Even {
 
