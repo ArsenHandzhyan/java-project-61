@@ -1,42 +1,21 @@
 package hexlet.code.games;
 
-import hexlet.code.Engine;
-
 import static hexlet.code.Engine.randomGen;
-import static hexlet.code.Engine.string;
+import static hexlet.code.Engine.game;
 
 public class Progression {
 
     public static void gameStart() {
-        System.out.println("\nWhat number is missing in the progression?");
-        game(0);
+        System.out.println("What number is missing in the progression?");
+        newGame(0);
     }
 
-    public static void game(int count) {
+    public static void newGame(int count) {
         String[] results = generate();
-        String result = results[0];
-        String hiddenNumber = results[1];
-        System.out.println("Question: " + result);
-        String input = string();
-        if (count <= 2) {
-            if (input.equals(hiddenNumber)) {
-                System.out.println("Correct!");
-                if (count == 2) {
-                    Engine.congratulations();
-                    Engine.gameEngine();
-                } else {
-                    game(++count);
-                }
-            } else {
-                System.out.println("Your answer: " + input);
-                System.out.print("'" + input + "'" + "is wrong answer ;(. Correct answer was");
-                System.out.println("'" + hiddenNumber + "'");
-                Engine.again();
-                Engine.gameEngine();
-            }
-        } else {
-            Engine.gameEngine();
-        }
+        String progression = results[0];
+        String result = results[1];
+        System.out.println("Question: " + progression);
+        game(count, result, 5);
     }
 
     public static String[] generate() {
