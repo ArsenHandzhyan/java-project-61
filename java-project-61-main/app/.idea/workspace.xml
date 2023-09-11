@@ -4,36 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1a72d580-3f95-4aae-a7ea-0a7b2af2ad44" name="Changes" comment="six Scanner problem">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/main/META-INF/MANIFEST.MF" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/test/MANIFEST.MF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/Engine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/Generate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Calc.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Calc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Even.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Even.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/GSD.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/GSD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Prime.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Prime.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bin/main/hexlet/code/games/Progression.class" beforeDir="false" afterPath="$PROJECT_DIR$/bin/main/hexlet/code/games/Progression.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/Engine.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/Engine.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/Generate.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Calc.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Calc.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Even.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/Even.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/GSD.class" beforeDir="false" afterPath="$PROJECT_DIR$/build/classes/java/main/hexlet/code/games/GSD.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Engine.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/Engine.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/Generate.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Calc.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Calc.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Even.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Even.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/GSD.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/GSD.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Prime.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Prime.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Progression.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/hexlet/code/games/Progression.java" afterDir="false" />
-    </list>
+    <list default="true" id="1a72d580-3f95-4aae-a7ea-0a7b2af2ad44" name="Changes" comment="fix gitignore" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="ChangesViewManager" show_ignored="true" />
   <component name="CodeStyleSettingsInfer">
     <option name="done" value="true" />
   </component>
@@ -140,6 +117,7 @@
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
     <option name="RESET_MODE" value="HARD" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/src/main/java/hexlet/code/Engine.java" root0="SKIP_INSPECTION" />
@@ -166,25 +144,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/User/IdeaProjects/java-project-61-main/app/src/main/java/hexlet/code",
-    "project.structure.last.edited": "Project",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.54022986",
-    "settings.editor.selected.configurable": "preferences.startup.tasks"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/User/IdeaProjects/java-project-61-main/app/src/main/java/hexlet/code&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;Project&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.15&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.54022986&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.startup.tasks&quot;
   },
-  "keyToStringList": {
-    "ChangesTree.GroupingKeys": [
-      "directory",
-      "module"
+  &quot;keyToStringList&quot;: {
+    &quot;ChangesTree.GroupingKeys&quot;: [
+      &quot;directory&quot;,
+      &quot;module&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\User\IdeaProjects\java-project-61-main\app" />
@@ -391,7 +369,14 @@
       <option name="project" value="LOCAL" />
       <updated>1694014754734</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="fix gitignore">
+      <created>1694438204736</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1694438204736</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TerminalProjectNonSharedOptionsProvider">
