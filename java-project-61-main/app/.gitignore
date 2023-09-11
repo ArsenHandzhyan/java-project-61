@@ -2,4 +2,9 @@ java-project-61-main/.idea/
 java-project-61-main/app/.gradle/
 app.gradle/
 app.idea/
-gradle/
+!/.gradle/
+!/bin/
+!/.idea/
+!/build/
+!/app.iml
+
