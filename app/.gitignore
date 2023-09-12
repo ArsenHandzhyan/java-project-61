@@ -7,6 +7,5 @@
 /.vscode/
 /app.iml
 /src/main/resources/hexlet/code/app/hello-view.fxml
-/gradlew
-/gradlew.bat
+
 
