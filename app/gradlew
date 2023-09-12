@@ -140,26 +140,33 @@ location of your Java installation."
 fi
 
 # Increase the maximum file descriptors if we can.
-if ! "$cygwin" && ! "$darwin" && ! "$nonstop" ; then
-    case $MAX_FD in #(
+if ! "$cygwin" && ! "$darwin" && ! "$nonstop"; then
+    case "$MAX_FD" in
       max*)
-        # In POSIX sh, ulimit -H is undefined. That's why the result is checked to see if it worked.
-        # shellcheck disable=SC3045 
-        # shellcheck disable=SC2039
-        MAX_FD=$( ulimit -H -n ) ||
-            warn "Could not query maximum file descriptor limit"
+        # Determine the maximum file descriptor limit
+        MAX_FD="4096"  # Set to a reasonable default value as a string
+        ;;
     esac
-    case $MAX_FD in  #(
-      '' | soft) :;; #(
-      *)
-        # In POSIX sh, ulimit -n is undefined. That's why the result is checked to see if it worked.
-        # shellcheck disable=SC3045 
-        # shellcheck disable=SC2039
-        ulimit -n "$MAX_FD" ||
-            warn "Could not set maximum file descriptor limit to $MAX_FD"
-    esac
-fi
 
+    # Attempt to increase the maximum file descriptor limit
+    if [ "$MAX_FD" != "maximum" ]; then
+        if command -v sysctl >/dev/null 2>&1; then
+            # macOS
+            sysctl -w kern.maxfiles="$MAX_FD"
+            sysctl -w kern.maxfilesperproc="$MAX_FD"
+        elif command -v sysctl.conf >/dev/null 2>&1; then
+            # Linux
+            echo "fs.file-max = $MAX_FD" > /etc/sysctl.conf
+            sysctl -p
+        elif command -v sysctl.d >/dev/null 2>&1; then
+            # Linux
+            echo "fs.file-max = $MAX_FD" > /etc/sysctl.d/99-file-max.conf
+            sysctl -p
+        else
+            warn "Could not set maximum file descriptor limit (unsupported platform)"
+        fi
+    fi
+fi
 # Collect all arguments for the java command, stacking in reverse order:
 #   * args from the command line
 #   * the main class name
