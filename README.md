@@ -8,3 +8,10 @@
 [![asciicast](https://asciinema.org/a/PWIL8eJHu3m5DFWbQ1uzpj2Jq.svg)](https://asciinema.org/a/PWIL8eJHu3m5DFWbQ1uzpj2Jq)
 [![asciicast](https://asciinema.org/a/V5tBs5vsd8tlRuPySv53bB07F.svg)](https://asciinema.org/a/V5tBs5vsd8tlRuPySv53bB07F)
 [![asciicast](https://asciinema.org/a/25O7K7Svevy0vy7pfR1CY8wCh.svg)](https://asciinema.org/a/25O7K7Svevy0vy7pfR1CY8wCh)
+A project template with only the bare minimum of structure. A good starting point for a small project. 
+
+## Start
+
+```bash
+make run-dist
+```
