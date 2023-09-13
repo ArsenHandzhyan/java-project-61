@@ -37,14 +37,14 @@ jar {
 
 // Use the 'java' block
 java {
-    sourceCompatibility = JavaVersion.VERSION_18
-    targetCompatibility = JavaVersion.VERSION_18
+    sourceCompatibility = JavaVersion.VERSION_20
+    targetCompatibility = JavaVersion.VERSION_20
 }
 
 // Set the '--release' flag for 'compileJava' task
 tasks.compileJava {
     options.compilerArgs.add('--release')
-    options.compilerArgs.add('18') // Change this to the desired Java version
+    options.compilerArgs.add('20') // Change this to the desired Java version
 }
 
 run {
