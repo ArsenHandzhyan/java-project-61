@@ -6,8 +6,8 @@ plugins {
     id 'org.beryx.jlink' version '2.25.0'
     id 'checkstyle'
 }
-
-version '1.0-SNAPSHOT'
+group = "hexlet.code"
+version = "1.0-SNAPSHOT"
 
 repositories {
     mavenCentral()

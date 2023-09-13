@@ -1,13 +1,23 @@
-/.idea/
-/bin/
+# Ignore Gradle project-specific cache directory
+.gradle
 
-/build/
-/.gradle/
+# Ignore Gradle build output directory
+build
 
-/.vscode/
-/app.iml
-/src/main/resources/hexlet/code/app/hello-view.fxml
+**/logs/
 
-
+.settings
+bin
+.project*
+.classpath
+.idea/
+.factorypath
 /.dockerignore
+/app.iml
+/.vscode/configurationCache.log
 /Dockerfile
+/.vscode/dryrun.log
+/gradle.properties.txt
+/src/main/resources/hexlet/code/app/hello-view.fxml
+/.vscode/settings.json
+/.vscode/targets.log
