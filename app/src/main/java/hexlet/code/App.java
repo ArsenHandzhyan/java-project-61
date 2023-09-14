@@ -25,44 +25,33 @@ public class App {
         String input = string();
 
         switch (input) {
-            case "1" -> {
-                Cli.greating();
-                break;
-            }
+            case "1" -> Cli.greating();
             case "2" -> {
                 greetings();
                 Even.gameStart();
-                break;
             }
             case "3" -> {
                 greetings();
                 Calc.gameStart();
-                break;
             }
             case "4" -> {
                 greetings();
                 GCD.gameStart();
-                break;
             }
             case "5" -> {
                 greetings();
                 Progression.gameStart();
-                break;
             }
             case "6" -> {
                 greetings();
                 Prime.gameStart();
-                break;
             }
             case "0" -> {
                 System.out.println("\nBay!");
-                break;
+                System.exit(0);
             }
-            default -> {
-                System.out.println("You entered an invalid value: from 1 to 6 to select a game and 0 to exit!\n");
-                break;
-            }
-
+            default ->
+                    System.out.println("You entered an invalid value: from 1 to 6 to select a game and 0 to exit!\n");
         }
     }
 }

@@ -46,7 +46,7 @@ public class Engine {
                 System.out.println("Correct!");
                 if (count == 2) {
                     Engine.congratulations();
-                    App.main(null);
+                    System.exit(0);
                 } else {
                     switch (game) {
                         case 2 -> Even.newGame(++count);
@@ -61,10 +61,10 @@ public class Engine {
                 System.out.print("'" + input + "'" + "is wrong answer ;(. Correct answer was");
                 System.out.println("'" + result + "'");
                 Engine.again();
-                App.main(null);
+                System.exit(0);
             }
         } else {
-            App.main(null);
+            System.exit(0);
         }
     }
 
