@@ -17,7 +17,7 @@ public class Prime {
         boolean correctAnswer = isSimple(results);
         String result = String.valueOf(correctAnswer);
         System.out.println("Question: " + number);
-        int game = 6;
+        String game = "6";
         game(count, result, game);
     }
 

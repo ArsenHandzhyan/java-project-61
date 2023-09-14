@@ -15,7 +15,7 @@ public class Progression {
         String progression = results[0];
         String result = results[1];
         System.out.println("Question: " + progression);
-        int game = 5;
+        String game = "5";
         game(count, result, game);
     }
 

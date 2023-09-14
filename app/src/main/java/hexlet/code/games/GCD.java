@@ -20,7 +20,7 @@ public class GCD {
         String expression = num1 + " " + num2;
         String result = Integer.toString(findGCD(num1, num2));
         System.out.println("Question: " + expression);
-        int game = 4;
+        String game = "4";
         game(count, result, game);
     }
 

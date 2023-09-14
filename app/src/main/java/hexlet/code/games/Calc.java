@@ -18,7 +18,7 @@ public class Calc {
         String expression = num1 + " " + sign + " " + num2;
         String result = calculateExpression(num1, num2, sign);
         System.out.println("Question: " + expression);
-        int game = 3;
+        String game = "3";
         game(count, result, game);
     }
 

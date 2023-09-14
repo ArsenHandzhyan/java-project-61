@@ -15,7 +15,7 @@ public class Even {
         int startNumber = 1;
         int evenNum = randomGen(101) + startNumber;
         System.out.println("Question: " + evenNum);
-        int game = 2;
+        String game = "2";
         game(count, evenNumber(evenNum), game);
     }
 
