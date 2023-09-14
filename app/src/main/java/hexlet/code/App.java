@@ -1,9 +1,68 @@
 package hexlet.code;
 
-import static hexlet.code.Engine.gameEngine;
+import hexlet.code.games.Even;
+import hexlet.code.games.Calc;
+import hexlet.code.games.GCD;
+import hexlet.code.games.Progression;
+import hexlet.code.games.Prime;
+
+import static hexlet.code.Engine.string;
+import static hexlet.code.Engine.greetings;
 
 public class App {
     public static void main(String[] args) {
-        gameEngine();
+        System.out.print("""
+                Please enter the game number and press Enter:
+                1 - Greet
+                2 - Even
+                3 - Calc
+                4 - GSD
+                5 - Progression
+                6 - Prime
+                0 - Exit
+                """);
+        System.out.print("Your choice: ");
+        String input = string();
+
+        switch (input) {
+            case "1" -> {
+                Cli.greating();
+                App.main(null);
+            }
+            case "2" -> {
+                greetings();
+                Even.gameStart();
+                App.main(null);
+            }
+            case "3" -> {
+                greetings();
+                Calc.gameStart();
+                App.main(null);
+            }
+            case "4" -> {
+                greetings();
+                GCD.gameStart();
+                App.main(null);
+            }
+            case "5" -> {
+                greetings();
+                Progression.gameStart();
+                App.main(null);
+            }
+            case "6" -> {
+                greetings();
+                Prime.gameStart();
+                App.main(null);
+            }
+            case "0" -> {
+                System.out.println("\nBay!");
+                System.exit(0);
+            }
+            default -> {
+                System.out.println("You entered an invalid value: from 1 to 6 to select a game and 0 to exit!\n");
+                App.main(null);
+            }
+
+        }
     }
 }
