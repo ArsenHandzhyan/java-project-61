@@ -31,14 +31,19 @@ public class Engine {
     public static void game(int count, String result, int game) {
         String input = string();
         System.out.println("Your answer: " + input);
-        if (game == 6) {
+        int evenGameNum = 2;
+        int calcGameNum = 3;
+        int gcdGameNum = 4;
+        int progressionGameNum = 5;
+        int primeGameNum = 6;
+        if (game == primeGameNum) {
             if (input.equals("yes")) {
                 input = "true";
             } else if (input.equals("no")) {
                 input = "false";
             } else {
                 System.out.println("input invalid enter \"yes\" or \"no\"");
-                App.main(null);
+                System.exit(0);
             }
         }
         if (count <= 2) {
@@ -48,14 +53,17 @@ public class Engine {
                     Engine.congratulations();
                     System.exit(0);
                 } else {
-                    switch (game) {
-                        case 2 -> Even.newGame(++count);
-                        case 3 -> Calc.newGame(++count);
-                        case 4 -> GCD.newGame(++count);
-                        case 5 -> Progression.newGame(++count);
-                        case 6 -> Prime.newGame(++count);
-                        default -> App.main(null);
-                    }
+                    if (game == evenGameNum) {
+                        Even.newGame(++count);
+                    } else if (game == calcGameNum) {
+                        Calc.newGame(++count);
+                    } else if (game == gcdGameNum) {
+                        GCD.newGame(++count);
+                    } else if (game == progressionGameNum) {
+                        Progression.newGame(++count);
+                    } else if (game == primeGameNum) {
+                        Prime.newGame(++count);
+                    } else System.exit(0);
                 }
             } else {
                 System.out.print("'" + input + "'" + "is wrong answer ;(. Correct answer was");
@@ -72,7 +80,7 @@ public class Engine {
         return new Random().nextInt(bound);
     }
 
-    static String name1;
+    private static String name1;
 
     public static void again() {
         System.out.println("Let's try again, " + name1 + "!");

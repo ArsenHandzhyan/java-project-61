@@ -11,12 +11,14 @@ public class Prime {
     }
 
     public static void newGame(int count) {
-        int results = randomGen(501) + 1;
+        int startNumber = 1;
+        int results = randomGen(501) + startNumber;
         String number = Integer.toString(results);
         boolean correctAnswer = isSimple(results);
         String result = String.valueOf(correctAnswer);
         System.out.println("Question: " + number);
-        game(count, result, 6);
+        int game = 6;
+        game(count, result, game);
     }
 
     public static boolean isSimple(Integer number) {

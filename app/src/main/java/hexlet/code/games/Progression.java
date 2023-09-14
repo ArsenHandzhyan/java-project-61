@@ -15,7 +15,8 @@ public class Progression {
         String progression = results[0];
         String result = results[1];
         System.out.println("Question: " + progression);
-        game(count, result, 5);
+        int game = 5;
+        game(count, result, game);
     }
 
     public static String[] generate() {
@@ -35,10 +36,12 @@ public class Progression {
     }
 
     public static int[] generateProgression() {
-        int length = randomGen(6) + 5; // Генерация случайной длины от 5 до 10
+        int startNumber = 5;
+        int length = randomGen(6) + startNumber; // Генерация случайной длины от 5 до 10
         int[] progression = new int[length];
         int start = randomGen(100); // Генерация случайного начального числа
-        int step = randomGen(25) + 1;
+        int stepStart = 1;
+        int step = randomGen(25) + stepStart;
         for (int i = 0; i < length; i++) {
             progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
         }

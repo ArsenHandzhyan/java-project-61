@@ -12,9 +12,11 @@ public class Even {
     }
 
     public static void newGame(int count) {
-        int evenNum = randomGen(101) + 1;
+        int startNumber = 1;
+        int evenNum = randomGen(101) + startNumber;
         System.out.println("Question: " + evenNum);
-        game(count, evenNumber(evenNum), 2);
+        int game = 2;
+        game(count, evenNumber(evenNum), game);
     }
 
     public static String evenNumber(int evenNum) {
