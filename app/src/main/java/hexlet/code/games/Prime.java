@@ -12,8 +12,8 @@ public class Prime {
 
     public static void newGame(int count) {
         int mintNumber = 1;
-        int bound = 501;
-        int results = randomGen(bound) + mintNumber;
+        int boundResults = 501;
+        int results = randomGen(boundResults) + mintNumber;
         String number = Integer.toString(results);
         boolean correctAnswer = isSimple(results);
         String result = String.valueOf(correctAnswer);

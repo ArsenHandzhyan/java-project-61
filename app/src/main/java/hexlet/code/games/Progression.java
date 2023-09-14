@@ -40,9 +40,11 @@ public class Progression {
         int bound = 6;
         int length = randomGen(bound) + minNumber; // Генерация случайной длины от 5 до 10
         int[] progression = new int[length];
-        int start = randomGen(100); // Генерация случайного начального числа
+        int boundStart = 101;
+        int start = randomGen(boundStart); // Генерация случайного начального числа
         int stepStart = 1;
-        int step = randomGen(25) + stepStart;
+        int boundStep = 25;
+        int step = randomGen(boundStep) + stepStart;
         for (int i = 0; i < length; i++) {
             progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
         }
