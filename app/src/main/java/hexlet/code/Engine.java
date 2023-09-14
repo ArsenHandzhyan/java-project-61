@@ -10,6 +10,7 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
+    private static String name1;
     private static final Scanner SCANNER = new Scanner(System.in);
 
     public static void greetings() {
@@ -46,7 +47,7 @@ public class Engine {
             if (input.equals(result)) {
                 System.out.println("Correct!");
                 if (count == 2) {
-                    Engine.congratulations();
+                    System.out.println("Congratulations, " + name1 + "!");
                     System.exit(0);
                 } else {
                     switch (game) {
@@ -61,7 +62,7 @@ public class Engine {
             } else {
                 System.out.print("'" + input + "'" + "is wrong answer ;(. Correct answer was");
                 System.out.println("'" + result + "'");
-                Engine.again();
+                System.out.println("Let's try again, " + name1 + "!");
                 System.exit(0);
             }
         } else {
@@ -73,14 +74,5 @@ public class Engine {
         return new Random().nextInt(bound);
     }
 
-    private static String name1;
-
-    public static void again() {
-        System.out.println("Let's try again, " + name1 + "!");
-    }
-
-    public static void congratulations() {
-        System.out.println("Congratulations, " + name1 + "!");
-    }
 }
 

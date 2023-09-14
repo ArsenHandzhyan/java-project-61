@@ -4,6 +4,8 @@ import static hexlet.code.Engine.randomGen;
 import static hexlet.code.Engine.game;
 
 public class Prime {
+    private static final int mintNumber = 1;
+    private static final int boundResults = 501;
 
     public static void gameStart() {
         System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
@@ -11,8 +13,6 @@ public class Prime {
     }
 
     public static void newGame(int count) {
-        int mintNumber = 1;
-        int boundResults = 501;
         int results = randomGen(boundResults) + mintNumber;
         String number = Integer.toString(results);
         boolean correctAnswer = isSimple(results);

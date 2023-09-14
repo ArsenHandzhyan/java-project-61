@@ -4,6 +4,11 @@ import static hexlet.code.Engine.randomGen;
 import static hexlet.code.Engine.game;
 
 public class Progression {
+    private static final int minNumber = 5;
+    private static final int bound = 6;
+    private static final int stepStart = 1;
+    private static final int boundStep = 25;
+    private static final int boundStart = 101;
 
     public static void gameStart() {
         System.out.println("What number is missing in the progression?");
@@ -36,14 +41,9 @@ public class Progression {
     }
 
     public static int[] generateProgression() {
-        int minNumber = 5;
-        int bound = 6;
         int length = randomGen(bound) + minNumber; // Генерация случайной длины от 5 до 10
         int[] progression = new int[length];
-        int boundStart = 101;
         int start = randomGen(boundStart); // Генерация случайного начального числа
-        int stepStart = 1;
-        int boundStep = 25;
         int step = randomGen(boundStep) + stepStart;
         for (int i = 0; i < length; i++) {
             progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
