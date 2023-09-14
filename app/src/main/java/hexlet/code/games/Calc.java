@@ -4,9 +4,9 @@ import static hexlet.code.Engine.randomGen;
 import static hexlet.code.Engine.game;
 
 public class Calc {
-    private static final int minNumber = 1;
-    private static final int boundNumber = 51;
-    private static final int boundSign = 3;
+    private static final int MIN_NUMBER = 1;
+    private static final int BOUND_NUMBER = 51;
+    private static final int BOUND_SIGN = 3;
 
     public static void gameStart() {
         System.out.println("What is the result of the expression?");
@@ -14,8 +14,8 @@ public class Calc {
     }
 
     public static void newGame(int count) {
-        int num1 = randomGen(boundNumber) + minNumber;
-        int num2 = randomGen(boundNumber) + minNumber;
+        int num1 = randomGen(BOUND_NUMBER) + MIN_NUMBER;
+        int num2 = randomGen(BOUND_NUMBER) + MIN_NUMBER;
         String sign = generateSign();
         String expression = num1 + " " + sign + " " + num2;
         String result = calculateExpression(num1, num2, sign);
@@ -25,7 +25,7 @@ public class Calc {
     }
 
     public static String generateSign() {
-        int sign = randomGen(boundSign);
+        int sign = randomGen(BOUND_SIGN);
         return switch (sign) {
             case 1 -> "-";
             case 2 -> "*";

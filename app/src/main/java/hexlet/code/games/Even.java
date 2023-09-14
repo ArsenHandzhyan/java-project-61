@@ -5,8 +5,8 @@ import static hexlet.code.Engine.randomGen;
 import static hexlet.code.Engine.game;
 
 public class Even {
-    private static final int minNumber = 1;
-    private static final int boundEven = 101;
+    private static final int MIN_NUMBER = 1;
+    private static final int BOUND = 101;
 
     public static void gameStart() {
         System.out.println("Answer 'yes' if the number is even, otherwise answer 'no'.");
@@ -14,7 +14,7 @@ public class Even {
     }
 
     public static void newGame(int count) {
-        int evenNum = randomGen(boundEven) + minNumber;
+        int evenNum = randomGen(BOUND) + MIN_NUMBER;
         System.out.println("Question: " + evenNum);
         String game = "2";
         game(count, evenNumber(evenNum), game);
