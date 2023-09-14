@@ -11,10 +11,12 @@ public class GCD {
     }
 
     public static void newGame(int count) {
-        int startNumber = 1;
-        int gcd = randomGen(31) + startNumber; // Ограничение общего делителя от 1 до 50
-        int multiplier1 = randomGen(21) + startNumber; // Генерируем вспомогательные множители для чисел
-        int multiplier2 = randomGen(21) + startNumber;
+        int minNumber = 1;
+        int boundGCD = 31;
+        int boundMultiplier = 21;
+        int gcd = randomGen(boundGCD) + minNumber; // Ограничение общего делителя от 1 до 50
+        int multiplier1 = randomGen(boundMultiplier) + minNumber; // Генерируем вспомогательные множители для чисел
+        int multiplier2 = randomGen(boundMultiplier) + minNumber;
         int num1 = gcd * multiplier1;  // Рассчитываем числа с учетом общего делителя
         int num2 = gcd * multiplier2;
         String expression = num1 + " " + num2;

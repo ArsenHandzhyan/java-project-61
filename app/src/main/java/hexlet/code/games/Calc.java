@@ -11,9 +11,10 @@ public class Calc {
     }
 
     public static void newGame(int count) {
-        int startNumber = 1;
-        int num1 = randomGen(50) + startNumber;
-        int num2 = randomGen(50) + startNumber;
+        int minNumber = 1;
+        int bound = 51;
+        int num1 = randomGen(bound) + minNumber;
+        int num2 = randomGen(bound) + minNumber;
         String sign = generateSign();
         String expression = num1 + " " + sign + " " + num2;
         String result = calculateExpression(num1, num2, sign);
@@ -23,7 +24,8 @@ public class Calc {
     }
 
     public static String generateSign() {
-        int sign = randomGen(3);
+        int bound = 3;
+        int sign = randomGen(bound);
         return switch (sign) {
             case 1 -> "-";
             case 2 -> "*";

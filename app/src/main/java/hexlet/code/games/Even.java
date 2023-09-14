@@ -12,8 +12,9 @@ public class Even {
     }
 
     public static void newGame(int count) {
-        int startNumber = 1;
-        int evenNum = randomGen(101) + startNumber;
+        int minNumber = 1;
+        int bound = 101;
+        int evenNum = randomGen(bound) + minNumber;
         System.out.println("Question: " + evenNum);
         String game = "2";
         game(count, evenNumber(evenNum), game);

@@ -36,8 +36,9 @@ public class Progression {
     }
 
     public static int[] generateProgression() {
-        int startNumber = 5;
-        int length = randomGen(6) + startNumber; // Генерация случайной длины от 5 до 10
+        int minNumber = 5;
+        int bound = 6;
+        int length = randomGen(bound) + minNumber; // Генерация случайной длины от 5 до 10
         int[] progression = new int[length];
         int start = randomGen(100); // Генерация случайного начального числа
         int stepStart = 1;
