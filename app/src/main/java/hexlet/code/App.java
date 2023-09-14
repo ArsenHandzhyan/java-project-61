@@ -27,40 +27,40 @@ public class App {
         switch (input) {
             case "1" -> {
                 Cli.greating();
-                App.main(null);
+                break;
             }
             case "2" -> {
                 greetings();
                 Even.gameStart();
-                App.main(null);
+                break;
             }
             case "3" -> {
                 greetings();
                 Calc.gameStart();
-                App.main(null);
+                break;
             }
             case "4" -> {
                 greetings();
                 GCD.gameStart();
-                App.main(null);
+                break;
             }
             case "5" -> {
                 greetings();
                 Progression.gameStart();
-                App.main(null);
+                break;
             }
             case "6" -> {
                 greetings();
                 Prime.gameStart();
-                App.main(null);
+                break;
             }
             case "0" -> {
                 System.out.println("\nBay!");
-                System.exit(0);
+                break;
             }
             default -> {
                 System.out.println("You entered an invalid value: from 1 to 6 to select a game and 0 to exit!\n");
-                App.main(null);
+                break;
             }
 
         }
