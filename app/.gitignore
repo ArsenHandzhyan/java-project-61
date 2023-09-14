@@ -14,11 +14,8 @@ bin
 .factorypath
 /.dockerignore
 /app.iml
-/.vscode/configurationCache.log
 /Dockerfile
-/.vscode/dryrun.log
 /gradle.properties.txt
 /src/main/resources/hexlet/code/app/hello-view.fxml
-/.vscode/settings.json
-/.vscode/targets.log
+/.vscode/
 

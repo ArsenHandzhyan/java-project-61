@@ -1,52 +1,36 @@
 plugins {
-    id 'java'
     id 'application'
-    id 'org.javamodularity.moduleplugin' version '1.8.12'
-    id 'org.openjfx.javafxplugin' version '0.0.13'
-    id 'org.beryx.jlink' version '2.25.0'
     id 'checkstyle'
 }
-group = "hexlet.code"
-version = "1.0-SNAPSHOT"
 
-repositories {
-    mavenCentral()
-}
+group = 'hexlet.code'
+version = '1.0-SNAPSHOT'
 
 application {
     mainClass = 'hexlet.code.App'
 }
 
+compileJava {
+    options.release = 20
+}
+
+run {
+    standardInput = System.in
+}
+
+repositories {
+    mavenCentral()
+}
+
 dependencies {
-    testImplementation("org.junit.jupiter:junit-jupiter-api:5.9.2")
-    testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.9.2")
+    testImplementation platform('org.junit:junit-bom:5.9.2')
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.9.2'
 }
 
 test {
     useJUnitPlatform()
 }
 
-jar {
-    manifest {
-        attributes 'Main-Class': 'hexlet.code.App'
-    }
-    from {
-        configurations.runtimeClasspath.collect { it.isDirectory() ? it : zipTree(it) }
-    }
-}
-
-// Use the 'java' block
-java {
-    sourceCompatibility = JavaVersion.VERSION_20
-    targetCompatibility = JavaVersion.VERSION_20
-}
-
-// Set the '--release' flag for 'compileJava' task
-tasks.compileJava {
-    options.compilerArgs.add('--release')
-    options.compilerArgs.add('20') // Change this to the desired Java version
-}
-
-run {
-    standardInput = System.in
+checkstyle {
+    toolVersion '10.12.1'
 }
