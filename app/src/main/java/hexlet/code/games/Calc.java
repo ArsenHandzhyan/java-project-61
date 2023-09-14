@@ -6,6 +6,7 @@ import static hexlet.code.Engine.game;
 public class Calc {
 
     public static void gameStart() {
+        System.out.println("What is the result of the expression?");
         newGame(0);
     }
 
