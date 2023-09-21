@@ -1,7 +1,8 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import static hexlet.code.Engine.randomGen;
-import static hexlet.code.Engine.game;
 
 public class Prime {
     private static final int MIN_NUMBER = 1;
@@ -18,8 +19,36 @@ public class Prime {
         boolean correctAnswer = isSimple(results);
         String result = String.valueOf(correctAnswer);
         System.out.println("Question: " + number);
-        String game = "6";
-        game(count, result, game);
+        play(count, result);
+    }
+
+    public static void play(int count, String result) {
+        String input = Engine.getString();
+        Engine.getAnswer(input);
+        if (input.equals("yes")) {
+            input = "true";
+        } else if (input.equals("no")) {
+            input = "false";
+        } else {
+            System.out.println("input invalid enter \"yes\" or \"no\"");
+            System.exit(0);
+        }
+        if (count <= 2) {
+            if (input.equals(result)) {
+                System.out.println("Correct!");
+                if (count == 2) {
+                    Engine.congratulate();
+                    System.exit(0);
+                } else {
+                    newGame(++count);
+                }
+            } else {
+                Engine.getIncorrectAnswer(input, result);
+                System.exit(0);
+            }
+        } else {
+            System.exit(0);
+        }
     }
 
     public static boolean isSimple(Integer number) {

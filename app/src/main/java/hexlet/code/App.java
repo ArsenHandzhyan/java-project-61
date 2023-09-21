@@ -6,7 +6,7 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
-import static hexlet.code.Engine.string;
+import static hexlet.code.Engine.getString;
 import static hexlet.code.Engine.greetings;
 
 public class App {
@@ -22,10 +22,10 @@ public class App {
                 0 - Exit
                 """);
         System.out.print("Your choice: ");
-        String input = string();
+        String input = getString();
 
         switch (input) {
-            case "1" -> Cli.greating();
+            case "1" -> Cli.greeting();
             case "2" -> {
                 greetings();
                 Even.gameStart();

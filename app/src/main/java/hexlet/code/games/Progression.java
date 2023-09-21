@@ -1,7 +1,8 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import static hexlet.code.Engine.randomGen;
-import static hexlet.code.Engine.game;
 
 public class Progression {
 
@@ -15,8 +16,28 @@ public class Progression {
         String progression = results[0];
         String result = results[1];
         System.out.println("Question: " + progression);
-        String game = "5";
-        game(count, result, game);
+        play(count, result);
+    }
+
+    public static void play(int count, String result) {
+        String input = Engine.getString();
+        Engine.getAnswer(input);
+        if (count <= 2) {
+            if (input.equals(result)) {
+                System.out.println("Correct!");
+                if (count == 2) {
+                    Engine.congratulate();
+                    System.exit(0);
+                } else {
+                    newGame(++count);
+                }
+            } else {
+                Engine.getIncorrectAnswer(input, result);
+                System.exit(0);
+            }
+        } else {
+            System.exit(0);
+        }
     }
 
     public static String[] generate() {

@@ -1,7 +1,8 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import static hexlet.code.Engine.randomGen;
-import static hexlet.code.Engine.game;
 
 public class GCD {
     private static final int MIN_NUMBER = 1; // Ограничение общего делителя  от 1
@@ -20,10 +21,30 @@ public class GCD {
         int num1 = gcd * multiplier1;  // Рассчитываем числа с учетом общего делителя
         int num2 = gcd * multiplier2;
         String expression = num1 + " " + num2;
-        String result = Integer.toString(findGCD(num1, num2));
+        String result = String.valueOf(findGCD(num1, num2));
         System.out.println("Question: " + expression);
-        String game = "4";
-        game(count, result, game);
+        play(count, result);
+    }
+
+    public static void play(int count, String result) {
+        String input = Engine.getString();
+        Engine.getAnswer(input);
+        if (count <= 2) {
+            if (input.equals(result)) {
+                System.out.println("Correct!");
+                if (count == 2) {
+                    Engine.congratulate();
+                    System.exit(0);
+                } else {
+                    newGame(++count);
+                }
+            } else {
+                Engine.getIncorrectAnswer(input, result);
+                System.exit(0);
+            }
+        } else {
+            System.exit(0);
+        }
     }
 
     public static int findGCD(int a, int b) {

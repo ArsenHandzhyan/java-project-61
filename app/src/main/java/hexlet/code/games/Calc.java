@@ -1,7 +1,8 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
+
 import static hexlet.code.Engine.randomGen;
-import static hexlet.code.Engine.game;
 
 public class Calc {
     private static final int MIN_NUMBER = 1;
@@ -18,10 +19,30 @@ public class Calc {
         int num2 = randomGen(BOUND_NUMBER) + MIN_NUMBER;
         String sign = generateSign();
         String expression = num1 + " " + sign + " " + num2;
-        String result = calculateExpression(num1, num2, sign);
+        String result = String.valueOf(calculateExpression(num1, num2, sign));
         System.out.println("Question: " + expression);
-        String game = "3";
-        game(count, result, game);
+        play(count, result);
+    }
+
+    public static void play(int count, String result) {
+        String input = Engine.getString();
+        Engine.getAnswer(input);
+        if (count <= 2) {
+            if (input.equals(result)) {
+                System.out.println("Correct!");
+                if (count == 2) {
+                    Engine.congratulate();
+                    System.exit(0);
+                } else {
+                    newGame(++count);
+                }
+            } else {
+                Engine.getIncorrectAnswer(input, result);
+                System.exit(0);
+            }
+        } else {
+            System.exit(0);
+        }
     }
 
     public static String generateSign() {
@@ -33,19 +54,19 @@ public class Calc {
         };
     }
 
-    public static String calculateExpression(int num1, int num2, String sign) {
+    public static int calculateExpression(int num1, int num2, String sign) {
         switch (sign) {
             case "+" -> {
-                return Integer.toString(num1 + num2);
+                return num1 + num2;
             }
             case "-" -> {
-                return Integer.toString(num1 - num2);
+                return num1 - num2;
             }
             case "*" -> {
-                return Integer.toString(num1 * num2);
+                return num1 * num2;
             }
             default -> {
-                return "0";
+                return 0;
             }
         }
     }

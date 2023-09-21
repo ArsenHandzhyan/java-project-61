@@ -1,8 +1,8 @@
 package hexlet.code.games;
 
+import hexlet.code.Engine;
 
 import static hexlet.code.Engine.randomGen;
-import static hexlet.code.Engine.game;
 
 public class Even {
     private static final int MIN_NUMBER = 1;
@@ -16,8 +16,29 @@ public class Even {
     public static void newGame(int count) {
         int evenNum = randomGen(BOUND) + MIN_NUMBER;
         System.out.println("Question: " + evenNum);
-        String game = "2";
-        game(count, evenNumber(evenNum), game);
+        String result = evenNumber(evenNum);
+        play(count, result);
+    }
+
+    public static void play(int count, String result) {
+        String input = Engine.getString();
+        Engine.getAnswer(input);
+        if (count <= 2) {
+            if (input.equals(result)) {
+                System.out.println("Correct!");
+                if (count == 2) {
+                    Engine.congratulate();
+                    System.exit(0);
+                } else {
+                    newGame(++count);
+                }
+            } else {
+                Engine.getIncorrectAnswer(input, result);
+                System.exit(0);
+            }
+        } else {
+            System.exit(0);
+        }
     }
 
     public static String evenNumber(int evenNum) {
