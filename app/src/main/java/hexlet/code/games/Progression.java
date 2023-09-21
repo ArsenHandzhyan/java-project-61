@@ -5,6 +5,11 @@ import hexlet.code.Engine;
 import static hexlet.code.Engine.randomGen;
 
 public class Progression {
+    private static final int MIN_NUMBER = 5;
+    private static final int BOUND_LENGTH = 6;
+    private static final int STEP_START = 1;
+    private static final int BOUND_STEP = 25;
+    private static final int BOUND_START = 101;
 
     public static void gameStart() {
         System.out.println("What number is missing in the progression?");
@@ -41,12 +46,7 @@ public class Progression {
     }
 
     public static String[] generate() {
-        int minNumber = 5;
-        int boundLength = 6;
-        int stepStart = 1;
-        int boundStep = 25;
-        int boundStart = 101;
-        int[] progression = generateProgression(minNumber, boundLength, boundStart, boundStep, stepStart);
+        int[] progression = generateProgression();
         int hiddenIndex = hideElement(progression);
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < progression.length; i++) {
@@ -61,12 +61,11 @@ public class Progression {
         return new String[]{result1, result2};
     }
 
-    public static int[] generateProgression(int minNumber, int boundLength,
-                                            int boundStart, int boundStep, int stepStart) {
-        int length = randomGen(boundLength) + minNumber; // Генерация случайной длины от 5 до 10
+    public static int[] generateProgression() {
+        int length = randomGen(BOUND_LENGTH) + MIN_NUMBER; // Генерация случайной длины от 5 до 10
         int[] progression = new int[length];
-        int start = randomGen(boundStart) + minNumber; // Генерация случайного начального числа
-        int step = randomGen(boundStep) + stepStart; // Генерация шага
+        int start = randomGen(BOUND_START) + MIN_NUMBER; // Генерация случайного начального числа
+        int step = randomGen(BOUND_STEP) + STEP_START; // Генерация шага
         for (int i = 0; i < length; i++) {
             progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
         }
