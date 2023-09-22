@@ -38,9 +38,30 @@ public class Engine {
         System.out.println("Let's try again, " + name1 + "!");
     }
 
-    public static int randomGen(int bound) {
+    public static int generateNumber(int bound) {
         return new Random().nextInt(bound);
     }
 
+    public static int getcount(int count, String result) {
+        String input = getString();
+        getAnswer(input);
+        if (count <= 2) {
+            if (input.equals(result)) {
+                System.out.println("Correct!");
+                if (count == 2) {
+                    congratulate();
+                    System.exit(0);
+                } else {
+                    return 1;
+                }
+            } else {
+                getIncorrectAnswer(input, result);
+                System.exit(0);
+            }
+        } else {
+            System.exit(0);
+        }
+        return 0;
+    }
 }
 

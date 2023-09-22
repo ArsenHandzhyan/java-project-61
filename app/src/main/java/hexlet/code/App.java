@@ -28,23 +28,23 @@ public class App {
             case "1" -> Cli.greeting();
             case "2" -> {
                 greetings();
-                Even.gameStart();
+                Even.startPlay();
             }
             case "3" -> {
                 greetings();
-                Calc.gameStart();
+                Calc.startPlay();
             }
             case "4" -> {
                 greetings();
-                GCD.gameStart();
+                GCD.startPlay();
             }
             case "5" -> {
                 greetings();
-                Progression.gameStart();
+                Progression.startPlay();
             }
             case "6" -> {
                 greetings();
-                Prime.gameStart();
+                Prime.startPlay();
             }
             case "0" -> {
                 System.out.println("\nBay!");
