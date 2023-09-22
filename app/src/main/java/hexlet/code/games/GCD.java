@@ -15,7 +15,7 @@ public class GCD {
 
     public static void newGamePlay(int count) {
         int gcd = generateNumber(BOUND_GCD) + MIN_NUMBER; // Ограничение общего делителя от 1 до 31
-        int multiplier1 = generateNumber(BOUND_MULTIPLIER) + MIN_NUMBER; // Генерируем вспомогательные множители для чисел
+        int multiplier1 = generateNumber(BOUND_MULTIPLIER) + MIN_NUMBER; // Генерируем вспомогательные множители
         int multiplier2 = generateNumber(BOUND_MULTIPLIER) + MIN_NUMBER;
         int num1 = gcd * multiplier1;  // Рассчитываем числа с учетом общего делителя
         int num2 = gcd * multiplier2;
