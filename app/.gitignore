@@ -11,13 +11,11 @@ bin
 .project*
 .classpath
 .idea/
-.factorypath
-/.dockerignore
 /app.iml
-/Dockerfile
 /gradle.properties.txt
 /src/main/resources/hexlet/code/app/hello-view.fxml
 /.vscode/
 workflows/
-src/test/
-src/main/resources/
+/src/main/resources/
+/src/test/resources/
+.github/workflows/
