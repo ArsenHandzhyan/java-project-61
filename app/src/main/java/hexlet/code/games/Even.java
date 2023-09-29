@@ -1,7 +1,10 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.generateNumber;
-import static hexlet.code.Engine.getcount;
+import static hexlet.code.Engine.getParityResult;
+import static hexlet.code.Engine.parsResult;
+import static hexlet.code.Engine.getCount;
+import static hexlet.code.Utils.generateNumber;
+
 
 public class Even {
     private static final int MIN_NUMBER = 1;
@@ -13,19 +16,12 @@ public class Even {
     }
 
     public static void newGamePlay(int count) {
-        int evenNum = generateNumber(BOUND) + MIN_NUMBER;
+        int evenNum = generateNumber(BOUND, MIN_NUMBER);
+        String result = String.valueOf(getParityResult(evenNum));
         System.out.println("Question: " + evenNum);
-        String result = getParityResult(evenNum);
-        if (getcount(count, result) == 1) {
+        String result1 = parsResult(result);
+        if (getCount(count, result1) == 1) {
             newGamePlay(++count);
-        }
-    }
-
-    public static String getParityResult(int evenNum) {
-        if (evenNum % 2 == 0) {
-            return "yes";
-        } else {
-            return "no";
         }
     }
 }

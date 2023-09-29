@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.generateNumber;
-import static hexlet.code.Engine.getcount;
+import static hexlet.code.Engine.getCount;
+import static hexlet.code.Utils.generateNumber;
 
 public class Progression {
     private static final int MIN_NUMBER = 5;
@@ -20,7 +20,7 @@ public class Progression {
         String progression = results[0];
         String result = results[1];
         System.out.println("Question: " + progression);
-        if (getcount(count, result) == 1) {
+        if (getCount(count, result) == 1) {
             newGamePlay(++count);
         }
     }
@@ -42,10 +42,10 @@ public class Progression {
     }
 
     public static int[] generateProgression() {
-        int length = generateNumber(BOUND_LENGTH) + MIN_NUMBER; // Генерация случайной длины от 5 до 10
+        int length = generateNumber(BOUND_LENGTH, MIN_NUMBER); // Генерация случайной длины от 5 до 10
         int[] progression = new int[length];
-        int start = generateNumber(BOUND_START) + MIN_NUMBER; // Генерация случайного начального числа
-        int step = generateNumber(BOUND_STEP) + STEP_START; // Генерация шага
+        int start = generateNumber(BOUND_START, MIN_NUMBER); // Генерация случайного начального числа
+        int step = generateNumber(BOUND_STEP, STEP_START); // Генерация шага
         for (int i = 0; i < length; i++) {
             progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
         }
@@ -53,6 +53,6 @@ public class Progression {
     }
 
     public static int getHidenElement(int[] progression) {
-        return generateNumber(progression.length);
+        return generateNumber(progression.length, 0);
     }
 }

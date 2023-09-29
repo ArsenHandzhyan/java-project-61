@@ -1,2 +1,2 @@
 run-dist:
-	sh ./build/install/app/bin/app
+	./build/install/app/bin/app

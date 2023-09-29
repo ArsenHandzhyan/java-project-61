@@ -1,6 +1,5 @@
 package hexlet.code;
 
-import java.util.Random;
 import java.util.Scanner;
 
 public class Engine {
@@ -38,11 +37,9 @@ public class Engine {
         System.out.println("Let's try again, " + name1 + "!");
     }
 
-    public static int generateNumber(int bound) {
-        return new Random().nextInt(bound);
-    }
 
-    public static int getcount(int count, String result) {
+
+    public static int getCount(int count, String result) {
         String input = getString();
         getAnswer(input);
         if (count <= 2) {
@@ -50,18 +47,35 @@ public class Engine {
                 System.out.println("Correct!");
                 if (count == 2) {
                     congratulate();
-                    System.exit(0);
                 } else {
                     return 1;
                 }
             } else {
                 getIncorrectAnswer(input, result);
-                System.exit(0);
             }
-        } else {
-            System.exit(0);
         }
         return 0;
+    }
+    public static boolean getParityResult(int evenNum) {
+        return evenNum % 2 == 0;
+    }
+    public static boolean getIsSimple(Integer number) {
+        if (number < 2) {
+            return false;
+        }
+        for (int i = 2; i < number / 2; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
+    }
+    public static String parsResult(String result) {
+        return switch (result) {
+            case "true" -> "yes";
+            case "false" -> "no";
+            default -> throw new Error("Unknown result!");
+        };
     }
 }
 

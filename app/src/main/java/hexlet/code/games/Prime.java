@@ -1,7 +1,9 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.generateNumber;
-import static hexlet.code.Engine.getcount;
+import static hexlet.code.Engine.getIsSimple;
+import static hexlet.code.Engine.parsResult;
+import static hexlet.code.Engine.getCount;
+import static hexlet.code.Utils.generateNumber;
 
 public class Prime {
     private static final int MIN_NUMBER = 1;
@@ -13,24 +15,13 @@ public class Prime {
     }
 
     public static void newGamePlay(int count) {
-        int results = generateNumber(BOUND) + MIN_NUMBER;
+        int results = generateNumber(BOUND, MIN_NUMBER);
         String number = Integer.toString(results);
-        String result = getIsSimple(results);
+        String result = String.valueOf(getIsSimple(results));
         System.out.println("Question: " + number);
-        if (getcount(count, result) == 1) {
+        String result1 = parsResult(result);
+        if (getCount(count, result1) == 1) {
             newGamePlay(++count);
         }
-    }
-
-    public static String getIsSimple(Integer number) {
-        if (number < 2) {
-            return "no";
-        }
-        for (int i = 2; i < number / 2; i++) {
-            if (number % i == 0) {
-                return "no";
-            }
-        }
-        return "yes";
     }
 }
