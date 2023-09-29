@@ -3,7 +3,7 @@ package hexlet.code.games;
 import static hexlet.code.Engine.getIsSimple;
 import static hexlet.code.Engine.parsResult;
 import static hexlet.code.Engine.getCount;
-import static hexlet.code.Utils.generateNumber;
+import static hexlet.code.Utils.getRandomInt;
 
 public class Prime {
     private static final int MIN_NUMBER = 1;
@@ -15,7 +15,7 @@ public class Prime {
     }
 
     public static void newGamePlay(int count) {
-        int results = generateNumber(BOUND, MIN_NUMBER);
+        int results = getRandomInt(BOUND, MIN_NUMBER);
         String number = Integer.toString(results);
         String result = String.valueOf(getIsSimple(results));
         System.out.println("Question: " + number);

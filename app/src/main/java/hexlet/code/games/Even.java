@@ -3,7 +3,7 @@ package hexlet.code.games;
 import static hexlet.code.Engine.getParityResult;
 import static hexlet.code.Engine.parsResult;
 import static hexlet.code.Engine.getCount;
-import static hexlet.code.Utils.generateNumber;
+import static hexlet.code.Utils.getRandomInt;
 
 
 public class Even {
@@ -16,7 +16,7 @@ public class Even {
     }
 
     public static void newGamePlay(int count) {
-        int evenNum = generateNumber(BOUND, MIN_NUMBER);
+        int evenNum = getRandomInt(BOUND, MIN_NUMBER);
         String result = String.valueOf(getParityResult(evenNum));
         System.out.println("Question: " + evenNum);
         String result1 = parsResult(result);

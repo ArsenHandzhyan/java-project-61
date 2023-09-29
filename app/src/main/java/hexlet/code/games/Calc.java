@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import static hexlet.code.Engine.getCount;
-import static hexlet.code.Utils.generateNumber;
+import static hexlet.code.Utils.getRandomInt;
 
 public class Calc {
     private static final int MIN_NUMBER = 1;
@@ -15,8 +15,8 @@ public class Calc {
     }
 
     public static void newGamePlay(int count) {
-        int num1 = generateNumber(BOUND_NUMBER, MIN_NUMBER);
-        int num2 = generateNumber(BOUND_NUMBER, MIN_NUMBER);
+        int num1 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
+        int num2 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
         String sign = generateSign();
         String expression = num1 + " " + sign + " " + num2;
         String result = String.valueOf(calculateExpression(num1, num2, sign));
@@ -27,7 +27,7 @@ public class Calc {
     }
 
     public static String generateSign() {
-        int sign = generateNumber(BOUND_SIGN, MIN_SIGN);
+        int sign = getRandomInt(BOUND_SIGN, MIN_SIGN);
         return switch (sign) {
             case 0 -> "-";
             case 1 -> "*";

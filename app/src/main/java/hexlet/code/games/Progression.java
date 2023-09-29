@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import static hexlet.code.Engine.getCount;
-import static hexlet.code.Utils.generateNumber;
+import static hexlet.code.Utils.getRandomInt;
 
 public class Progression {
     private static final int MIN_NUMBER = 5;
@@ -42,10 +42,10 @@ public class Progression {
     }
 
     public static int[] generateProgression() {
-        int length = generateNumber(BOUND_LENGTH, MIN_NUMBER); // Генерация случайной длины от 5 до 10
+        int length = getRandomInt(BOUND_LENGTH, MIN_NUMBER); // Генерация случайной длины от 5 до 10
         int[] progression = new int[length];
-        int start = generateNumber(BOUND_START, MIN_NUMBER); // Генерация случайного начального числа
-        int step = generateNumber(BOUND_STEP, STEP_START); // Генерация шага
+        int start = getRandomInt(BOUND_START, MIN_NUMBER); // Генерация случайного начального числа
+        int step = getRandomInt(BOUND_STEP, STEP_START); // Генерация шага
         for (int i = 0; i < length; i++) {
             progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
         }
@@ -53,6 +53,6 @@ public class Progression {
     }
 
     public static int getHidenElement(int[] progression) {
-        return generateNumber(progression.length, 0);
+        return getRandomInt(progression.length, 0);
     }
 }
