@@ -5,9 +5,14 @@ import java.util.Scanner;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Engine {
+    private static final int MIN_NUMBER = 5;
+    private static final int BOUND_LENGTH = 6;
+    private static final int STEP_START = 1;
+    private static final int BOUND_STEP = 25;
+    private static final int BOUND_START = 101;
     private static final int BOUND_SIGN = 2;
     private static final int MIN_SIGN = 0;
-    private static String name1;
+    private static String playerName;
     private static final Scanner SCANNER = new Scanner(System.in);
 
     public static void greetings() {
@@ -19,7 +24,7 @@ public class Engine {
     public static void greetings1() {
         String name = getString();
         System.out.print("Hello, " + name + "!\n");
-        name1 = name;
+        playerName = name;
     }
 
     public static void askQuestion(String question) {
@@ -30,19 +35,19 @@ public class Engine {
         return SCANNER.nextLine();
     }
 
-    public static void getAnswer(String input) {
-        System.out.println("Your answer: " + input);
+    public static void getAnswer(String answer) {
+        System.out.println("Your answer: " + answer);
     }
 
     public static void congratulate() {
-        System.out.println("Congratulations, " + name1 + "!");
+        System.out.println("Congratulations, " + playerName + "!");
         System.exit(0);
     }
 
     public static void getIncorrectAnswer(String input, String result) {
         System.out.print("'" + input + "'" + "is wrong answer ;(. Correct answer was");
         System.out.println("'" + result + "'");
-        System.out.println("Let's try again, " + name1 + "!");
+        System.out.println("Let's try again, " + playerName + "!");
     }
 
 
@@ -113,6 +118,33 @@ public class Engine {
         } else {
             return getNumGCD(b, a % b);
         }
+    }
+
+    public static String[] generateQuestionForProgression() {
+        int[] progression = generateProgression();
+        int hiddenIndex = getRandomInt(progression.length, 0);
+        StringBuilder stringBuilder = new StringBuilder();
+        for (int i = 0; i < progression.length; i++) {
+            if (i != hiddenIndex) {
+                stringBuilder.append(progression[i]).append(" ");
+            } else {
+                stringBuilder.append(".. ");
+            }
+        }
+        String result1 = stringBuilder.toString().trim();
+        String result2 = String.valueOf(progression[hiddenIndex]);
+        return new String[]{result1, result2};
+    }
+
+    public static int[] generateProgression() {
+        int length = getRandomInt(BOUND_LENGTH, MIN_NUMBER); // Генерация случайной длины от 5 до 10
+        int[] progression = new int[length];
+        int start = getRandomInt(BOUND_START, MIN_NUMBER); // Генерация случайного начального числа
+        int step = getRandomInt(BOUND_STEP, STEP_START); // Генерация шага
+        for (int i = 0; i < length; i++) {
+            progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
+        }
+        return progression;
     }
 }
 
