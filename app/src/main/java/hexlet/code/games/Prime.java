@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import static hexlet.code.Engine.getIsSimple;
+import static hexlet.code.Engine.askQuestion;
 import static hexlet.code.Engine.parsResult;
 import static hexlet.code.Engine.getCount;
 import static hexlet.code.Utils.getRandomInt;
@@ -18,7 +19,7 @@ public class Prime {
         int results = getRandomInt(BOUND, MIN_NUMBER);
         String number = Integer.toString(results);
         String result = String.valueOf(getIsSimple(results));
-        System.out.println("Question: " + number);
+        askQuestion(number);
         String result1 = parsResult(result);
         if (getCount(count, result1) == 1) {
             newGamePlay(++count);

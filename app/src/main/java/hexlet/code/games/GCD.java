@@ -1,5 +1,7 @@
 package hexlet.code.games;
 
+import static hexlet.code.Engine.getNumGCD;
+import static hexlet.code.Engine.askQuestion;
 import static hexlet.code.Engine.getCount;
 import static hexlet.code.Utils.getRandomInt;
 
@@ -20,18 +22,10 @@ public class GCD {
         int num1 = gcd * multiplier1;  // Рассчитываем числа с учетом общего делителя
         int num2 = gcd * multiplier2;
         String expression = num1 + " " + num2;
-        String result = String.valueOf(getFindGCD(num1, num2));
-        System.out.println("Question: " + expression);
+        String result = String.valueOf(getNumGCD(num1, num2));
+        askQuestion(expression);
         if (getCount(count, result) == 1) {
             newGamePlay(++count);
-        }
-    }
-
-    public static int getFindGCD(int a, int b) {
-        if (b == 0) {
-            return a;
-        } else {
-            return getFindGCD(b, a % b);
         }
     }
 }

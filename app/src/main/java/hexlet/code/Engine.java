@@ -2,7 +2,11 @@ package hexlet.code;
 
 import java.util.Scanner;
 
+import static hexlet.code.Utils.getRandomInt;
+
 public class Engine {
+    private static final int BOUND_SIGN = 2;
+    private static final int MIN_SIGN = 0;
     private static String name1;
     private static final Scanner SCANNER = new Scanner(System.in);
 
@@ -16,6 +20,10 @@ public class Engine {
         String name = getString();
         System.out.print("Hello, " + name + "!\n");
         name1 = name;
+    }
+
+    public static void askQuestion(String question) {
+        System.out.println("Question: " + question);
     }
 
     public static String getString() {
@@ -38,7 +46,6 @@ public class Engine {
     }
 
 
-
     public static int getCount(int count, String result) {
         String input = getString();
         getAnswer(input);
@@ -56,9 +63,11 @@ public class Engine {
         }
         return 0;
     }
+
     public static boolean getParityResult(int evenNum) {
         return evenNum % 2 == 0;
     }
+
     public static boolean getIsSimple(Integer number) {
         if (number < 2) {
             return false;
@@ -70,12 +79,40 @@ public class Engine {
         }
         return true;
     }
+
     public static String parsResult(String result) {
         return switch (result) {
             case "true" -> "yes";
             case "false" -> "no";
             default -> throw new Error("Unknown result!");
         };
+    }
+
+    public static String generateSign() {
+        int sign = getRandomInt(BOUND_SIGN, MIN_SIGN);
+        return switch (sign) {
+            case 0 -> "-";
+            case 1 -> "*";
+            case 2 -> "+";
+            default -> throw new Error("Unknown sign!");
+        };
+    }
+
+    public static int calculateExpression(int num1, int num2, String sign) {
+        return switch (sign) {
+            case "+" -> num1 + num2;
+            case "-" -> num1 - num2;
+            case "*" -> num1 * num2;
+            default -> throw new Error("Unknown expression!");
+        };
+    }
+
+    public static int getNumGCD(int a, int b) {
+        if (b == 0) {
+            return a;
+        } else {
+            return getNumGCD(b, a % b);
+        }
     }
 }
 

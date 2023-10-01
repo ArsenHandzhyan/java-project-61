@@ -1,6 +1,7 @@
 package hexlet.code.games;
 
 import static hexlet.code.Engine.getParityResult;
+import static hexlet.code.Engine.askQuestion;
 import static hexlet.code.Engine.parsResult;
 import static hexlet.code.Engine.getCount;
 import static hexlet.code.Utils.getRandomInt;
@@ -16,9 +17,9 @@ public class Even {
     }
 
     public static void newGamePlay(int count) {
-        int evenNum = getRandomInt(BOUND, MIN_NUMBER);
-        String result = String.valueOf(getParityResult(evenNum));
-        System.out.println("Question: " + evenNum);
+        int num = getRandomInt(BOUND, MIN_NUMBER);
+        String result = String.valueOf(getParityResult(num));
+        askQuestion(Integer.toString(num));
         String result1 = parsResult(result);
         if (getCount(count, result1) == 1) {
             newGamePlay(++count);

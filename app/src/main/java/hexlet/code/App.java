@@ -48,7 +48,7 @@ public class App {
             }
             case "0" -> System.out.println("\nBay!");
             default -> System.out.println("You entered an invalid value: from 1 to "
-                                            + "6 to select a game and 0 to exit!\n");
+                    + "6 to select a game and 0 to exit!\n");
         }
     }
 }

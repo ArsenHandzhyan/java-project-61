@@ -1,5 +1,6 @@
 package hexlet.code.games;
 
+import static hexlet.code.Engine.askQuestion;
 import static hexlet.code.Engine.getCount;
 import static hexlet.code.Utils.getRandomInt;
 
@@ -16,18 +17,18 @@ public class Progression {
     }
 
     public static void newGamePlay(int count) {
-        String[] results = generateQuestion();
+        String[] results = generateQuestionForProgression();
         String progression = results[0];
         String result = results[1];
-        System.out.println("Question: " + progression);
+        askQuestion(progression);
         if (getCount(count, result) == 1) {
             newGamePlay(++count);
         }
     }
 
-    public static String[] generateQuestion() {
+    public static String[] generateQuestionForProgression() {
         int[] progression = generateProgression();
-        int hiddenIndex = getHidenElement(progression);
+        int hiddenIndex = getRandomInt(progression.length, 0);
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < progression.length; i++) {
             if (i != hiddenIndex) {
@@ -50,9 +51,5 @@ public class Progression {
             progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
         }
         return progression;
-    }
-
-    public static int getHidenElement(int[] progression) {
-        return getRandomInt(progression.length, 0);
     }
 }
