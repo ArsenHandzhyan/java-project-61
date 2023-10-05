@@ -17,7 +17,7 @@ public class Prime {
     public static String[] roundsData(int count) {
         int results = getRandomInt(BOUND, MIN_NUMBER);
         String number = Integer.toString(results);
-        String result = String.valueOf(getIsSimple(results));
+        String result = parsResult(String.valueOf(getIsSimple(results)));
         return new String[]{result, number, Integer.toString(GAME_NUMBER), Integer.toString(count)};
     }
 
@@ -31,5 +31,12 @@ public class Prime {
             }
         }
         return true;
+    }
+    public static String parsResult(String result) {
+        return switch (result) {
+            case "true" -> "yes";
+            case "false" -> "no";
+            default -> throw new Error("Unknown result!");
+        };
     }
 }
