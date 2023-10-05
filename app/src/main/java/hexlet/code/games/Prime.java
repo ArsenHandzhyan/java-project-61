@@ -1,28 +1,35 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.getIsSimple;
-import static hexlet.code.Engine.askQuestion;
-import static hexlet.code.Engine.parsResult;
-import static hexlet.code.Engine.getCount;
+import static hexlet.code.Engine.run;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Prime {
+    private static final int GAME_NUMBER = 6;
+    private static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int MIN_NUMBER = 1;
-    private static final int BOUND = 501;
+    private static final int BOUND = 1000;
 
-    public static void startPlay() {
-        System.out.println("Answer 'yes' if given number is prime. Otherwise answer 'no'.");
-        newGamePlay(0);
+    public static void startPlay(int count) {
+        String[] results = roundsData(count);
+        run(DESCRIPTION, results);
     }
 
-    public static void newGamePlay(int count) {
+    public static String[] roundsData(int count) {
         int results = getRandomInt(BOUND, MIN_NUMBER);
         String number = Integer.toString(results);
         String result = String.valueOf(getIsSimple(results));
-        askQuestion(number);
-        String result1 = parsResult(result);
-        if (getCount(count, result1) == 1) {
-            newGamePlay(++count);
+        return new String[]{result, number, Integer.toString(GAME_NUMBER), Integer.toString(count)};
+    }
+
+    public static boolean getIsSimple(Integer number) {
+        if (number < 2) {
+            return false;
         }
+        for (int i = 2; i < number / 2; i++) {
+            if (number % i == 0) {
+                return false;
+            }
+        }
+        return true;
     }
 }
