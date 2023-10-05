@@ -10,12 +10,13 @@ import static hexlet.code.Utils.getString;
 
 public class Engine {
     private static String playerName;
+    private static final int COUNT_INDEX = 3;
 
     public static void run(String description, String[] roundsData) {
         String result = roundsData[0];
         String questions = roundsData[1];
         String gameNumber = roundsData[2];
-        String countS = roundsData[3];
+        String countS = roundsData[COUNT_INDEX];
         int count = Integer.parseInt(countS);
         if (count == 0) {
             System.out.println("\nWelcome to the Brain Games!");
