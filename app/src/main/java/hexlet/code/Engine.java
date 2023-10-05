@@ -33,7 +33,6 @@ public class Engine {
                 System.out.println("Correct!");
                 if (count == 2) {
                     System.out.println("Congratulations, " + playerName + "!\n");
-                    App.main(null);
                 } else {
                     switch (gameNumber) {
                         case "1" -> Cli.greeting();
@@ -49,10 +48,7 @@ public class Engine {
                 System.out.print("'" + input + "'" + "is wrong answer ;(. Correct answer was");
                 System.out.println("'" + result + "'");
                 System.out.println("Let's try again, " + playerName + "!");
-                App.main(null);
             }
-        } else {
-            App.main(null);
         }
     }
 }
