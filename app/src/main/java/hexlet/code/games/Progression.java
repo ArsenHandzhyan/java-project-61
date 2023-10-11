@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.run;
 import static hexlet.code.Utils.getRandomInt;
+import static hexlet.code.games.RoundsDataMaker.roundsData;
 
 public class Progression {
     private static final String DESCRIPTION = "What number is missing in the progression?";
@@ -10,30 +10,20 @@ public class Progression {
     private static final int STEP_START = 1;
     private static final int BOUND_STEP = 25;
     private static final int BOUND_START = 100;
-    static int generatedLength1 = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
-    static int generatedLength2 = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
-    static int generatedLength3 = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
-    static int generatedStartNumber1 = getRandomInt(BOUND_START, MIN_NUMBER);
-    static int generatedStartNumber2 = getRandomInt(BOUND_START, MIN_NUMBER);
-    static int generatedStartNumber3 = getRandomInt(BOUND_START, MIN_NUMBER);
-    static int generatedStepNumber1 = getRandomInt(BOUND_STEP, STEP_START);
-    static int generatedStepNumber2 = getRandomInt(BOUND_STEP, STEP_START);
-    static int generatedStepNumber3 = getRandomInt(BOUND_STEP, STEP_START);
 
     public static void startPlay() {
-        String[] round1 = roundsData(0, generatedLength1, generatedStartNumber1, generatedStepNumber1);
-        String[] round2 = roundsData(1, generatedLength2, generatedStartNumber2, generatedStepNumber2);
-        String[] round3 = roundsData(2, generatedLength3, generatedStartNumber3, generatedStepNumber3);
-        String[][] roundsData = {round1, round2, round3};
-        run(DESCRIPTION, roundsData, 0);
+        roundsData(generateRoundData(0), generateRoundData(1), generateRoundData(2), DESCRIPTION);
     }
 
-    public static String[] roundsData(int count1, int lengthNumber, int startNumber, int stepNumber) {
-        String[] results = generateQuestionForProgression(lengthNumber, startNumber, stepNumber);
-        String count = Integer.toString(count1);
+    public static String[] generateRoundData(int count) {
+        int generatedLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
+        int generatedStartNumber = getRandomInt(BOUND_START, MIN_NUMBER);
+        int generatedStepNumber = getRandomInt(BOUND_STEP, STEP_START);
+        String[] results = generateQuestionForProgression(generatedLength, generatedStartNumber, generatedStepNumber);
+        String countGame = Integer.toString(count);
         String questions = results[0];
         String result = results[1];
-        return new String[]{result, questions, count};
+        return new String[]{result, questions, countGame};
     }
 
     public static String[] generateQuestionForProgression(int lengthNumber, int startNumber, int stepNumber) {
