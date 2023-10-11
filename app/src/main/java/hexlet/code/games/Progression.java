@@ -15,37 +15,32 @@ public class Progression {
     private static int generateStepNumber = getRandomInt(BOUND_STEP, STEP_START); // Генерация шага
 
     public static void startPlay() {
-        String[] round1 = roundsData(0);
-        generateStartNumber = getRandomInt(BOUND_START, MIN_NUMBER);
+        String[] round1 = roundsData(0, generateLength, generateStartNumber, generateStepNumber);
         generateLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
-        generateStepNumber = getRandomInt(BOUND_STEP, STEP_START);
-        String[] round2 = roundsData(1);
         generateStartNumber = getRandomInt(BOUND_START, MIN_NUMBER);
-        generateLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
         generateStepNumber = getRandomInt(BOUND_STEP, STEP_START);
-        String[] round3 = roundsData(2);
+        String[] round2 = roundsData(1, generateLength, generateStartNumber, generateStepNumber);
+        generateLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
+        generateStartNumber = getRandomInt(BOUND_START, MIN_NUMBER);
+        generateStepNumber = getRandomInt(BOUND_STEP, STEP_START);
+        String[] round3 = roundsData(2, generateLength, generateStartNumber, generateStepNumber);
         String[][] roundsData = {round1, round2, round3};
         run(DESCRIPTION, roundsData, 0);
     }
 
-    public static String[] roundsData(int count1) {
-        String[] results = generateQuestionForProgression();
+    public static String[] roundsData(int count1, int generateLength, int generateStartNumber, int generateStepNumber) {
+        String[] results = generateQuestionForProgression(generateLength, generateStartNumber, generateStepNumber);
         String count = Integer.toString(count1);
         String questions = results[0];
         String result = results[1];
         return new String[]{result, questions, count};
     }
 
-    public static int[] generateProgression() {
+    public static String[] generateQuestionForProgression(int generateLength, int generateStartNumber, int generateStepNumber) {
         int[] progression = new int[generateLength];
         for (int i = 0; i < generateLength; i++) {
-            progression[i] = generateStartNumber + (i * generateStepNumber); // Шаг арифметической прогрессии равен step
+            progression[i] = generateStartNumber + (i * generateStepNumber);
         }
-        return progression;
-    }
-
-    public static String[] generateQuestionForProgression() {
-        int[] progression = generateProgression();
         int hiddenIndex = getRandomInt(progression.length, 0);
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < progression.length; i++) {
