@@ -5,7 +5,7 @@ import static hexlet.code.Utils.getRandomInt;
 import static hexlet.code.games.RoundsDataMaker.roundsData;
 
 public class Even {
-    private static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'";
+    private static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
     private static final int MIN_NUMBER = 1;
     private static final int BOUND = 101;
 
