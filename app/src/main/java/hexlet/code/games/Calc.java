@@ -9,23 +9,20 @@ public class Calc {
     private static final int MIN_SIGN = 0;
     private static final int MIN_NUMBER = 1;
     private static final int BOUND_NUMBER = 50;
-    private static int generateNumber = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
-    private static int generateSign = getRandomInt(BOUND_SIGN, MIN_SIGN);
-
+    static int generatedNumber1 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
+    static int generatedNumber2 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
+    static int generatedNumber3 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
+    static int generatedNumber4 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
+    static int generatedNumber5 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
+    static int generatedNumber6 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
+    static int generatedSign1 = getRandomInt(BOUND_SIGN, MIN_SIGN);
+    static int generatedSign2 = getRandomInt(BOUND_SIGN, MIN_SIGN);
+    static int generatedSign3 = getRandomInt(BOUND_SIGN, MIN_SIGN);
 
     public static void startPlay() {
-        int generateNumber1 = generateNumber;
-        int generateNumber2 = generateNumber;
-        int signNumber = generateSign;
-        String[] round1 = roundsData(0, generateNumber1, generateNumber2, signNumber);
-        generateNumber1 = generateNumber;
-        generateNumber2 = generateNumber;
-        signNumber = generateSign;
-        String[] round2 = roundsData(1, generateNumber1, generateNumber2, signNumber);
-        generateNumber1 = generateNumber;
-        generateNumber2 = generateNumber;
-        signNumber = generateSign;
-        String[] round3 = roundsData(2, generateNumber1, generateNumber2, signNumber);
+        String[] round1 = roundsData(0, generatedNumber1, generatedNumber2, generatedSign1);
+        String[] round2 = roundsData(1, generatedNumber3, generatedNumber4, generatedSign2);
+        String[] round3 = roundsData(2, generatedNumber5, generatedNumber6, generatedSign3);
         String[][] roundsData = {round1, round2, round3};
         run(DESCRIPTION, roundsData, 0);
     }

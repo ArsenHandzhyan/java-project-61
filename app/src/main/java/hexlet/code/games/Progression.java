@@ -10,23 +10,20 @@ public class Progression {
     private static final int STEP_START = 1;
     private static final int BOUND_STEP = 25;
     private static final int BOUND_START = 100;
-    private static int generateLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER); // Генерация случайной длины от 5 до 10
-    private static int generateStartNumber = getRandomInt(BOUND_START, MIN_NUMBER); // Cлучайного начального числа
-    private static int generateStepNumber = getRandomInt(BOUND_STEP, STEP_START); // Генерация шага
+    static int generatedLength1 = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
+    static int generatedLength2 = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
+    static int generatedLength3 = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
+    static int generatedStartNumber1 = getRandomInt(BOUND_START, MIN_NUMBER);
+    static int generatedStartNumber2 = getRandomInt(BOUND_START, MIN_NUMBER);
+    static int generatedStartNumber3 = getRandomInt(BOUND_START, MIN_NUMBER);
+    static int generatedStepNumber1 = getRandomInt(BOUND_STEP, STEP_START);
+    static int generatedStepNumber2 = getRandomInt(BOUND_STEP, STEP_START);
+    static int generatedStepNumber3 = getRandomInt(BOUND_STEP, STEP_START);
 
     public static void startPlay() {
-        int lengthNumber = generateLength;
-        int startNumber = generateStartNumber;
-        int stepNumber = generateStepNumber;
-        String[] round1 = roundsData(0, lengthNumber, startNumber, stepNumber);
-        lengthNumber = generateLength;
-        startNumber = generateStartNumber;
-        stepNumber = generateStepNumber;
-        String[] round2 = roundsData(1, lengthNumber, startNumber, stepNumber);
-        lengthNumber = generateLength;
-        startNumber = generateStartNumber;
-        stepNumber = generateStepNumber;
-        String[] round3 = roundsData(2, lengthNumber, startNumber, stepNumber);
+        String[] round1 = roundsData(0, generatedLength1, generatedStartNumber1, generatedStepNumber1);
+        String[] round2 = roundsData(1, generatedLength2, generatedStartNumber2, generatedStepNumber2);
+        String[] round3 = roundsData(2, generatedLength3, generatedStartNumber3, generatedStepNumber3);
         String[][] roundsData = {round1, round2, round3};
         run(DESCRIPTION, roundsData, 0);
     }

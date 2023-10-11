@@ -7,15 +7,14 @@ public class Prime {
     private static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
     private static final int MIN_NUMBER = 1;
     private static final int BOUND = 1000;
-    private static int generateNumber = getRandomInt(BOUND, MIN_NUMBER);
+    static int generatedNumber1 = getRandomInt(BOUND, MIN_NUMBER);
+    static int generatedNumber2 = getRandomInt(BOUND, MIN_NUMBER);
+    static int generatedNumber3 = getRandomInt(BOUND, MIN_NUMBER);
 
     public static void startPlay() {
-        int number = generateNumber;
-        String[] round1 = roundsData(0, number);
-        number = generateNumber;
-        String[] round2 = roundsData(1, number);
-        number = generateNumber;
-        String[] round3 = roundsData(2, number);
+        String[] round1 = roundsData(0, generatedNumber1);
+        String[] round2 = roundsData(1, generatedNumber2);
+        String[] round3 = roundsData(2, generatedNumber3);
         String[][] roundsData = {round1, round2, round3};
         run(DESCRIPTION, roundsData, 0);
     }
@@ -32,7 +31,7 @@ public class Prime {
         if (number < 2) {
             return false;
         }
-        for (int i = 2; i < number / 2; i++) {
+        for (int i = 2; i <= Math.sqrt(number); i++) {
             if (number % i == 0) {
                 return false;
             }
