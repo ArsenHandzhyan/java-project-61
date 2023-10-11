@@ -7,6 +7,7 @@ import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
 import static hexlet.code.Utils.getString;
+import static hexlet.code.Utils.scanner;
 
 public class App {
     public static void main(String[] args) {
@@ -22,17 +23,20 @@ public class App {
                 """);
         System.out.print("Your choice: ");
         String input = getString();
-
         switch (input) {
             case "1" -> Cli.greeting();
-            case "2" -> Even.startPlay(0);
-            case "3" -> Calc.startPlay(0);
-            case "4" -> GCD.startPlay(0);
-            case "5" -> Progression.startPlay(0);
-            case "6" -> Prime.startPlay(0);
+            case "2" -> Even.startPlay();
+            case "3" -> Calc.startPlay();
+            case "4" -> GCD.startPlay();
+            case "5" -> Progression.startPlay();
+            case "6" -> Prime.startPlay();
             case "0" -> System.out.println("\nBay!");
-            default -> System.out.println("You entered an invalid value: from 1 to "
-                    + "6 to select a game and 0 to exit!\n");
+            default -> {
+                System.out.println("You entered an invalid value: from 1 to "
+                        + "6 to select a game and 0 to exit!\n");
+                App.main(null);
+            }
         }
+        scanner.close();
     }
 }

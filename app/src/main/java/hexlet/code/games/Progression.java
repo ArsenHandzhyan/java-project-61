@@ -4,32 +4,42 @@ import static hexlet.code.Engine.run;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Progression {
-    private static final int GAME_NUMBER = 5;
     private static final String DESCRIPTION = "What number is missing in the progression?";
     private static final int MIN_NUMBER = 5;
     private static final int BOUND_LENGTH = 10;
     private static final int STEP_START = 1;
     private static final int BOUND_STEP = 25;
     private static final int BOUND_START = 100;
+    private static int generateLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER); // Генерация случайной длины от 5 до 10
+    private static int generateStartNumber = getRandomInt(BOUND_START, MIN_NUMBER); // Cлучайного начального числа
+    private static int generateStepNumber = getRandomInt(BOUND_STEP, STEP_START); // Генерация шага
 
-    public static void startPlay(int count) {
-        String[] results = roundsData(count);
-        run(DESCRIPTION, results);
+    public static void startPlay() {
+        String[] round1 = roundsData(0);
+        generateStartNumber = getRandomInt(BOUND_START, MIN_NUMBER);
+        generateLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
+        generateStepNumber = getRandomInt(BOUND_STEP, STEP_START);
+        String[] round2 = roundsData(1);
+        generateStartNumber = getRandomInt(BOUND_START, MIN_NUMBER);
+        generateLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
+        generateStepNumber = getRandomInt(BOUND_STEP, STEP_START);
+        String[] round3 = roundsData(2);
+        String[][] roundsData = {round1, round2, round3};
+        run(DESCRIPTION, roundsData, 0);
     }
-    public static String[] roundsData(int count) {
+
+    public static String[] roundsData(int count1) {
         String[] results = generateQuestionForProgression();
-        String progression = results[0];
+        String count = Integer.toString(count1);
+        String questions = results[0];
         String result = results[1];
-        return new String[]{result, progression, Integer.toString(GAME_NUMBER), Integer.toString(count)};
+        return new String[]{result, questions, count};
     }
 
     public static int[] generateProgression() {
-        int length = getRandomInt(BOUND_LENGTH, MIN_NUMBER); // Генерация случайной длины от 5 до 10
-        int[] progression = new int[length];
-        int start = getRandomInt(BOUND_START, MIN_NUMBER); // Генерация случайного начального числа
-        int step = getRandomInt(BOUND_STEP, STEP_START); // Генерация шага
-        for (int i = 0; i < length; i++) {
-            progression[i] = start + (i * step); // Шаг арифметической прогрессии равен step
+        int[] progression = new int[generateLength];
+        for (int i = 0; i < generateLength; i++) {
+            progression[i] = generateStartNumber + (i * generateStepNumber); // Шаг арифметической прогрессии равен step
         }
         return progression;
     }
