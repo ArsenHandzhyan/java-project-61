@@ -7,8 +7,6 @@ import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
 import static hexlet.code.Utils.getString;
-import static hexlet.code.Utils.scanner;
-
 public class App {
     public static void main(String[] args) {
         System.out.print("""
@@ -34,6 +32,5 @@ public class App {
             default -> System.out.println("You entered an invalid value: from 1 to "
                     + "6 to select a game and 0 to exit!\n");
         }
-        scanner.close();
     }
 }

@@ -19,3 +19,10 @@ workflows/
 /src/main/resources/
 /src/test/resources/
 .github/workflows/
+/spec/10_brain_games_spec.rb
+/spec/20_brain_even_spec.rb
+/spec/30_brain_calc_spec.rb
+/spec/40_brain_gcd_spec.rb
+/spec/50_brain_progression_spec.rb
+/spec/60_brain_prime_spec.rb
+/spec/spec_helper.rb
