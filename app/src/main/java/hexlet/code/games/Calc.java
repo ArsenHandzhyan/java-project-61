@@ -9,28 +9,30 @@ public class Calc {
     private static final int MIN_SIGN = 0;
     private static final int MIN_NUMBER = 1;
     private static final int BOUND_NUMBER = 50;
-    private static int generateNumber1 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
-    private static int generateNumber2 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
+    private static int generateNumber = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
     private static int generateSign = getRandomInt(BOUND_SIGN, MIN_SIGN);
 
 
     public static void startPlay() {
-        String[] round1 = roundsData(0, generateNumber1, generateNumber2);
-        generateNumber1 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
-        generateNumber2 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
-        generateSign = getRandomInt(BOUND_SIGN, MIN_SIGN);
-        String[] round2 = roundsData(1, generateNumber1, generateNumber2);
-        generateNumber1 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
-        generateNumber2 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
-        generateSign = getRandomInt(BOUND_SIGN, MIN_SIGN);
-        String[] round3 = roundsData(2, generateNumber1, generateNumber2);
+        int generateNumber1 = generateNumber;
+        int generateNumber2 = generateNumber;
+        int signNumber = generateSign;
+        String[] round1 = roundsData(0, generateNumber1, generateNumber2, signNumber);
+        generateNumber1 = generateNumber;
+        generateNumber2 = generateNumber;
+        signNumber = generateSign;
+        String[] round2 = roundsData(1, generateNumber1, generateNumber2, signNumber);
+        generateNumber1 = generateNumber;
+        generateNumber2 = generateNumber;
+        signNumber = generateSign;
+        String[] round3 = roundsData(2, generateNumber1, generateNumber2, signNumber);
         String[][] roundsData = {round1, round2, round3};
         run(DESCRIPTION, roundsData, 0);
     }
 
-    public static String[] roundsData(int count1, int generateNumber1, int generateNumber2) {
+    public static String[] roundsData(int count1, int generateNumber1, int generateNumber2, int signNumber) {
         String count = Integer.toString(count1);
-        String sign = generateSign(generateSign);
+        String sign = generateSign(signNumber);
         String questions = generateNumber1 + " " + sign + " " + generateNumber2;
         String result = String.valueOf(calculateExpression(generateNumber1, generateNumber2, sign));
         return new String[]{result, questions, count};

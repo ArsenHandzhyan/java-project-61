@@ -10,18 +10,19 @@ public class Even {
     private static int generateNumber = getRandomInt(BOUND, MIN_NUMBER);
 
     public static void startPlay() {
-        String[] round1 = roundsData(0, generateNumber);
-        generateNumber = getRandomInt(BOUND, MIN_NUMBER);
-        String[] round2 = roundsData(1, generateNumber);
-        generateNumber = getRandomInt(BOUND, MIN_NUMBER);
-        String[] round3 = roundsData(2, generateNumber);
+        int generateNumber1 = generateNumber;
+        int generateNumber2 = generateNumber;
+        int generateNumber3 = generateNumber;
+        String[] round1 = roundsData(0, generateNumber1);
+        String[] round2 = roundsData(1, generateNumber2);
+        String[] round3 = roundsData(2, generateNumber3);
         String[][] roundsData = {round1, round2, round3};
         run(DESCRIPTION, roundsData, 0);
     }
 
-    public static String[] roundsData(int count1, int generateNumber) {
-        String result = isParityResult(generateNumber) ? "yes" : "no";
-        String questions = Integer.toString(generateNumber);
+    public static String[] roundsData(int count1, int number) {
+        String result = isParityResult(number) ? "yes" : "no";
+        String questions = Integer.toString(number);
         String count = Integer.toString(count1);
         return new String[]{result, questions, count};
     }

@@ -10,19 +10,20 @@ public class Prime {
     private static int generateNumber = getRandomInt(BOUND, MIN_NUMBER);
 
     public static void startPlay() {
-        String[] round1 = roundsData(0, generateNumber);
-        generateNumber = getRandomInt(BOUND, MIN_NUMBER);
-        String[] round2 = roundsData(1, generateNumber);
-        generateNumber = getRandomInt(BOUND, MIN_NUMBER);
-        String[] round3 = roundsData(2, generateNumber);
+        int number = generateNumber;
+        String[] round1 = roundsData(0, number);
+        number = generateNumber;
+        String[] round2 = roundsData(1, number);
+        number = generateNumber;
+        String[] round3 = roundsData(2, number);
         String[][] roundsData = {round1, round2, round3};
         run(DESCRIPTION, roundsData, 0);
     }
 
-    public static String[] roundsData(int count1, int generateNumber) {
+    public static String[] roundsData(int count1, int number) {
         String count = Integer.toString(count1);
-        String questions = Integer.toString(generateNumber);
-        boolean isSimple = isSimple(generateNumber);
+        String questions = Integer.toString(number);
+        boolean isSimple = isSimple(number);
         String result = isSimple ? "yes" : "no";
         return new String[]{result, questions, count};
     }

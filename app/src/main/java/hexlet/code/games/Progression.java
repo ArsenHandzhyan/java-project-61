@@ -15,31 +15,34 @@ public class Progression {
     private static int generateStepNumber = getRandomInt(BOUND_STEP, STEP_START); // Генерация шага
 
     public static void startPlay() {
-        String[] round1 = roundsData(0, generateLength, generateStartNumber, generateStepNumber);
-        generateLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
-        generateStartNumber = getRandomInt(BOUND_START, MIN_NUMBER);
-        generateStepNumber = getRandomInt(BOUND_STEP, STEP_START);
-        String[] round2 = roundsData(1, generateLength, generateStartNumber, generateStepNumber);
-        generateLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
-        generateStartNumber = getRandomInt(BOUND_START, MIN_NUMBER);
-        generateStepNumber = getRandomInt(BOUND_STEP, STEP_START);
-        String[] round3 = roundsData(2, generateLength, generateStartNumber, generateStepNumber);
+        int lengthNumber = generateLength;
+        int startNumber = generateStartNumber;
+        int stepNumber = generateStepNumber;
+        String[] round1 = roundsData(0, lengthNumber, startNumber, stepNumber);
+        lengthNumber = generateLength;
+        startNumber = generateStartNumber;
+        stepNumber = generateStepNumber;
+        String[] round2 = roundsData(1, lengthNumber, startNumber, stepNumber);
+        lengthNumber = generateLength;
+        startNumber = generateStartNumber;
+        stepNumber = generateStepNumber;
+        String[] round3 = roundsData(2, lengthNumber, startNumber, stepNumber);
         String[][] roundsData = {round1, round2, round3};
         run(DESCRIPTION, roundsData, 0);
     }
 
-    public static String[] roundsData(int count1, int generateLength, int generateStartNumber, int generateStepNumber) {
-        String[] results = generateQuestionForProgression(generateLength, generateStartNumber, generateStepNumber);
+    public static String[] roundsData(int count1, int lengthNumber, int startNumber, int stepNumber) {
+        String[] results = generateQuestionForProgression(lengthNumber, startNumber, stepNumber);
         String count = Integer.toString(count1);
         String questions = results[0];
         String result = results[1];
         return new String[]{result, questions, count};
     }
 
-    public static String[] generateQuestionForProgression(int generateLength, int generateStartNumber, int generateStepNumber) {
-        int[] progression = new int[generateLength];
-        for (int i = 0; i < generateLength; i++) {
-            progression[i] = generateStartNumber + (i * generateStepNumber);
+    public static String[] generateQuestionForProgression(int lengthNumber, int startNumber, int stepNumber) {
+        int[] progression = new int[lengthNumber];
+        for (int i = 0; i < lengthNumber; i++) {
+            progression[i] = startNumber + (i * stepNumber);
         }
         int hiddenIndex = getRandomInt(progression.length, 0);
         StringBuilder stringBuilder = new StringBuilder();
