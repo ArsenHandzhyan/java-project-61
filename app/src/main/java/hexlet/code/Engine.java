@@ -15,7 +15,7 @@ public class Engine {
         String questions = roundsData[count][QUESTIONS_INDEX];
         if (count == 0) {
             System.out.println("\nWelcome to the Brain Games!");
-            System.out.println("May I have your name? ");
+            System.out.print("May I have your name? ");
             String name = getString();
             System.out.print("\nHello, " + name + "!\n");
             playerName = name;
