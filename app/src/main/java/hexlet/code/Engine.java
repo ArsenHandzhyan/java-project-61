@@ -8,29 +8,47 @@ public class Engine {
     public static void run(String description, String[][] roundsData, int countNewGame) {
         String result = roundsData[countNewGame][0];
         String questions = roundsData[countNewGame][1];
-        String countS = roundsData[countNewGame][2];
-        int count = Integer.parseInt(countS);
+        int count = Integer.parseInt(roundsData[countNewGame][2]);
+
         if (count == 0) {
             getGreet(description);
+            printQuestion(questions);
+            checkAnswerAndGetInput(result, count, description, roundsData);
+        } else if (count <= 2) {
+            printQuestion(questions);
+            checkAnswerAndGetInput(result, count, description, roundsData);
         }
-        System.out.println("Question: " + questions);
+    }
+
+    private static void printQuestion(String question) {
+        System.out.println("Question: " + question);
+    }
+
+    private static void checkAnswerAndGetInput(String result, int count, String description, String[][] roundsData) {
         String input = getString();
         System.out.println("Your answer: " + input);
-        if (count <= 2) {
-            if (input.equals(result)) {
-                System.out.println("Correct!");
-                if (count == 2) {
-                    System.out.println("Congratulations, " + playerName + "!\n");
-                } else {
-                    ++count;
-                    run(description, roundsData, count);
-                }
-            } else {
-                System.out.print("'" + input + "'" + "is wrong answer ;(. Correct answer was");
-                System.out.println("'" + result + "'");
-                System.out.println("Let's try again, " + playerName + "!");
+
+        if (input.equals(result)) {
+            printCorrectAnswer(count);
+            if (count < 2) {
+                run(description, roundsData, ++count);
             }
+        } else {
+            printIncorrectAnswer(input, result);
         }
+    }
+
+    private static void printCorrectAnswer(int count) {
+        System.out.println("Correct!");
+        if (count == 2) {
+            System.out.println("Congratulations, " + playerName + "!\n");
+        }
+    }
+
+    private static void printIncorrectAnswer(String input, String result) {
+        System.out.print("'" + input + "'" + " is wrong answer ;(. Correct answer was");
+        System.out.println("'" + result + "'");
+        System.out.println("Let's try again, " + playerName + "!");
     }
 
     public static void getGreet(String description) {
@@ -42,4 +60,3 @@ public class Engine {
         System.out.println(description);
     }
 }
-
