@@ -11,12 +11,7 @@ public class Engine {
         String countS = roundsData[countNewGame][2];
         int count = Integer.parseInt(countS);
         if (count == 0) {
-            System.out.println("\nWelcome to the Brain Games!");
-            System.out.print("May I have your name? ");
-            String name = getString();
-            System.out.print("Hello, " + name + "!\n");
-            playerName = name;
-            System.out.println(description);
+            getGreet(description);
         }
         System.out.println("Question: " + questions);
         String input = getString();
@@ -36,6 +31,15 @@ public class Engine {
                 System.out.println("Let's try again, " + playerName + "!");
             }
         }
+    }
+
+    public static void getGreet(String description) {
+        System.out.println("\nWelcome to the Brain Games!");
+        System.out.print("May I have your name? ");
+        String name = getString();
+        System.out.print("Hello, " + name + "!\n");
+        playerName = name;
+        System.out.println(description);
     }
 }
 

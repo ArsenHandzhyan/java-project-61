@@ -7,6 +7,7 @@ import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
 import static hexlet.code.Utils.getString;
+
 public class App {
     public static void main(String[] args) {
         System.out.print("""
