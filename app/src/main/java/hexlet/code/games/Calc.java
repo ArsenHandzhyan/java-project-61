@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import static hexlet.code.Utils.getRandomInt;
-import static hexlet.code.games.RoundsDataMaker.roundsData;
+import static hexlet.code.RoundsDataMaker.roundsData;
 
 public class Calc {
     private static final String DESCRIPTION = "What is the result of the expression?";
@@ -11,7 +11,10 @@ public class Calc {
     private static final int BOUND_NUMBER = 50;
 
     public static void startPlay() {
-        roundsData(generateRoundData(0), generateRoundData(1), generateRoundData(2), DESCRIPTION);
+        String[] round1 = generateRoundData(0);
+        String[] round2 = generateRoundData(1);
+        String[] round3 = generateRoundData(2);
+        roundsData(round1, round2, round3, DESCRIPTION);
     }
 
     public static String[] generateRoundData(int count) {

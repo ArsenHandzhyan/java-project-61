@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
 import static hexlet.code.Utils.getRandomInt;
-import static hexlet.code.games.RoundsDataMaker.roundsData;
+import static hexlet.code.RoundsDataMaker.roundsData;
 
 public class GCD {
     private static final String DESCRIPTION = "Find the greatest common divisor of given numbers.";
@@ -10,7 +10,10 @@ public class GCD {
     private static final int BOUND_MULTIPLIER = 20; // Ограничение вспомогательного множителя для чисел до
 
     public static void startPlay() {
-        roundsData(generateRoundData(0), generateRoundData(1), generateRoundData(2), DESCRIPTION);
+        String[] round1 = generateRoundData(0);
+        String[] round2 = generateRoundData(1);
+        String[] round3 = generateRoundData(2);
+        roundsData(round1, round2, round3, DESCRIPTION);
     }
 
     public static String[] generateRoundData(int count) {

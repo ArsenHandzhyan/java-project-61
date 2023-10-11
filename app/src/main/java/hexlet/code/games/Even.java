@@ -2,7 +2,7 @@ package hexlet.code.games;
 
 
 import static hexlet.code.Utils.getRandomInt;
-import static hexlet.code.games.RoundsDataMaker.roundsData;
+import static hexlet.code.RoundsDataMaker.roundsData;
 
 public class Even {
     private static final String DESCRIPTION = "Answer 'yes' if the number is even, otherwise answer 'no'.";
@@ -10,14 +10,17 @@ public class Even {
     private static final int BOUND = 101;
 
     public static void startPlay() {
-        roundsData(generateRoundData(0), generateRoundData(1), generateRoundData(2), DESCRIPTION);
+        String[] round1 = generateRoundData(0);
+        String[] round2 = generateRoundData(1);
+        String[] round3 = generateRoundData(2);
+        roundsData(round1, round2, round3, DESCRIPTION);
     }
 
     private static String[] generateRoundData(int count) {
-        int number = getRandomInt(BOUND, MIN_NUMBER);
+        int generatedNumber = getRandomInt(BOUND, MIN_NUMBER);
         String countGame = Integer.toString(count);
-        String result = isParityResult(number) ? "yes" : "no";
-        String questions = Integer.toString(number);
+        String result = isParityResult(generatedNumber) ? "yes" : "no";
+        String questions = Integer.toString(generatedNumber);
         return new String[]{result, questions, countGame};
     }
 
