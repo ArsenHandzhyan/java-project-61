@@ -9,7 +9,7 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
-    private static final Scanner scanner = new Scanner(System.in);
+    private static final Scanner SCANNER = new Scanner(System.in);
     static String consoleInput;
     public static void main(String[] args) {
         System.out.print("""
@@ -23,7 +23,7 @@ public class App {
                 0 - Exit
                 """);
         System.out.print("Your choice: ");
-        consoleInput = scanner.nextLine();
+        consoleInput = SCANNER.nextLine();
         switch (consoleInput) {
             case "1" -> Cli.greeting();
             case "2" -> Even.startPlay();

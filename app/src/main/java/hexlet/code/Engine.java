@@ -7,7 +7,6 @@ public class Engine {
     private static String playerName;
     static String consoleInput;
 
-
     public static void run(String description, String[][] roundsData, int countNewGame) {
         String result = roundsData[countNewGame][0];
         String questions = roundsData[countNewGame][1];
@@ -30,7 +29,6 @@ public class Engine {
     private static void checkAnswerAndGetInput(String result, int count, String description, String[][] roundsData) {
         consoleInput = SCANNER.nextLine();
         System.out.println("Your answer: " + consoleInput);
-
         if (consoleInput.equals(result)) {
             printCorrectAnswer(count);
             if (count < 2) {
@@ -57,7 +55,6 @@ public class Engine {
     public static void getGreet(String description) {
         System.out.println("\nWelcome to the Brain Games!");
         System.out.print("May I have your name? ");
-
         playerName = SCANNER.nextLine();
         System.out.print("Hello, " + playerName + "!\n");
         System.out.println(description);
