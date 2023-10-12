@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
+import static hexlet.code.Engine.run;
 import static hexlet.code.Utils.getRandomInt;
-import static hexlet.code.RoundsDataMaker.roundsData;
 
 public class Prime {
     private static final String DESCRIPTION = "Answer 'yes' if given number is prime. Otherwise answer 'no'.";
@@ -12,7 +12,8 @@ public class Prime {
         String[] round1 = generateRoundData(0);
         String[] round2 = generateRoundData(1);
         String[] round3 = generateRoundData(2);
-        roundsData(round1, round2, round3, DESCRIPTION);
+        String[][] roundsData = {round1, round2, round3};
+        run(DESCRIPTION, roundsData, 0);
     }
 
     public static String[] generateRoundData(int count) {

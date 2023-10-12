@@ -1,7 +1,7 @@
 package hexlet.code.games;
 
+import static hexlet.code.Engine.run;
 import static hexlet.code.Utils.getRandomInt;
-import static hexlet.code.RoundsDataMaker.roundsData;
 
 public class Progression {
     private static final String DESCRIPTION = "What number is missing in the progression?";
@@ -15,7 +15,8 @@ public class Progression {
         String[] round1 = generateRoundData(0);
         String[] round2 = generateRoundData(1);
         String[] round3 = generateRoundData(2);
-        roundsData(round1, round2, round3, DESCRIPTION);
+        String[][] roundsData = {round1, round2, round3};
+        run(DESCRIPTION, roundsData, 0);
     }
 
     public static String[] generateRoundData(int count) {
