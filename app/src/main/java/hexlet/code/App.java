@@ -9,9 +9,8 @@ import hexlet.code.games.Prime;
 import java.util.Scanner;
 
 public class App {
+    private static final Scanner scanner = new Scanner(System.in);
     public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-
         System.out.print("""
                 Please enter the game number and press Enter:
                 1 - Greet
@@ -25,7 +24,10 @@ public class App {
         System.out.print("Your choice: ");
         String input = scanner.nextLine();
         switch (input) {
-            case "1" -> Cli.greeting();
+            case "1" -> {
+                Cli.greeting();
+                Cli.greeting();
+            }
             case "2" -> Even.startPlay();
             case "3" -> Calc.startPlay();
             case "4" -> GCD.startPlay();
@@ -35,6 +37,5 @@ public class App {
             default -> System.out.println("You entered an invalid value: from 1 to "
                     + "6 to select a game and 0 to exit!\n");
         }
-        scanner.close();
     }
 }
