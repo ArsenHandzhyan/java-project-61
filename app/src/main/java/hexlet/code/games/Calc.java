@@ -11,22 +11,21 @@ public class Calc {
     private static final int BOUND_NUMBER = 50;
 
     public static void startPlay() {
-        String[] round1 = generateRoundData(0);
-        String[] round2 = generateRoundData(1);
-        String[] round3 = generateRoundData(2);
+        String[] round1 = generateRoundData();
+        String[] round2 = generateRoundData();
+        String[] round3 = generateRoundData();
         String[][] roundsData = {round1, round2, round3};
         run(DESCRIPTION, roundsData, 0);
     }
 
-    public static String[] generateRoundData(int count) {
+    public static String[] generateRoundData() {
         int generatedNumber1 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
         int generatedNumber2 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
         int generatedSign1 = getRandomInt(BOUND_SIGN, MIN_SIGN);
-        String countGame = Integer.toString(count);
         String sign = generateSign(generatedSign1);
         String questions = generatedNumber1 + " " + sign + " " + generatedNumber2;
         String result = String.valueOf(calculateExpression(generatedNumber1, generatedNumber2, sign));
-        return new String[]{result, questions, countGame};
+        return new String[]{result, questions};
     }
 
     public static String generateSign(int sign) {

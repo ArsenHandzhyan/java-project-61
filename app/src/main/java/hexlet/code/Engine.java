@@ -6,11 +6,9 @@ public class Engine {
     private static final Scanner SCANNER = new Scanner(System.in);
     private static String playerName;
 
-    public static void run(String description, String[][] roundsData, int countNewGame) {
-        String result = roundsData[countNewGame][0];
-        String questions = roundsData[countNewGame][1];
-        int count = Integer.parseInt(roundsData[countNewGame][2]);
-
+    public static void run(String description, String[][] roundsData, int count) {
+        String result = roundsData[count][0];
+        String questions = roundsData[count][1];
         if (count == 0) {
             getGreet(description);
             printQuestion(questions);

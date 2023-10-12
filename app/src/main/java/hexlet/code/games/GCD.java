@@ -10,23 +10,22 @@ public class GCD {
     private static final int BOUND_MULTIPLIER = 20; // Ограничение вспомогательного множителя для чисел до
 
     public static void startPlay() {
-        String[] round1 = generateRoundData(0);
-        String[] round2 = generateRoundData(1);
-        String[] round3 = generateRoundData(2);
+        String[] round1 = generateRoundData();
+        String[] round2 = generateRoundData();
+        String[] round3 = generateRoundData();
         String[][] roundsData = {round1, round2, round3};
         run(DESCRIPTION, roundsData, 0);
     }
 
-    public static String[] generateRoundData(int count) {
+    public static String[] generateRoundData() {
         int generatedGCD = getRandomInt(BOUND_GCD, MIN_NUMBER);
         int multiplayer1 = getRandomInt(BOUND_MULTIPLIER, MIN_NUMBER);
         int multiplayer2 = getRandomInt(BOUND_MULTIPLIER, MIN_NUMBER);
         int num1 = generatedGCD * multiplayer1;  // Рассчитываем числа с учетом общего делителя
         int num2 = generatedGCD * multiplayer2;
-        String countGame = Integer.toString(count);
         String expression = num1 + " " + num2;
         String result = String.valueOf(getNumGCD(num1, num2));
-        return new String[]{result, expression, countGame};
+        return new String[]{result, expression};
     }
 
     public static int getNumGCD(int num1, int num2) {
