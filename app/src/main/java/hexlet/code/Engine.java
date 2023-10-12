@@ -1,10 +1,9 @@
 package hexlet.code;
 
-import static hexlet.code.Utils.getString;
+import java.util.Scanner;
 
 public class Engine {
     private static String playerName;
-
     public static void run(String description, String[][] roundsData, int countNewGame) {
         String result = roundsData[countNewGame][0];
         String questions = roundsData[countNewGame][1];
@@ -25,9 +24,10 @@ public class Engine {
     }
 
     private static void checkAnswerAndGetInput(String result, int count, String description, String[][] roundsData) {
-        String input = getString();
-        System.out.println("Your answer: " + input);
+        Scanner scanner = new Scanner(System.in);
 
+        String input = scanner.nextLine();
+        System.out.println("Your answer: " + input);
         if (input.equals(result)) {
             printCorrectAnswer(count);
             if (count < 2) {
@@ -36,6 +36,7 @@ public class Engine {
         } else {
             printIncorrectAnswer(input, result);
         }
+        scanner.close();
     }
 
     private static void printCorrectAnswer(int count) {
@@ -52,11 +53,12 @@ public class Engine {
     }
 
     public static void getGreet(String description) {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("\nWelcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        String name = getString();
-        System.out.print("Hello, " + name + "!\n");
-        playerName = name;
+        playerName = scanner.nextLine();
+        System.out.print("Hello, " + playerName + "!\n");
         System.out.println(description);
     }
 }

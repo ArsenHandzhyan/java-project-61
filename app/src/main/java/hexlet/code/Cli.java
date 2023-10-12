@@ -1,13 +1,17 @@
 package hexlet.code;
 
-import static hexlet.code.Utils.getString;
+import java.util.Scanner;
 
 public class Cli {
 
     public static void greeting() {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("\nWelcome to the Brain Games!");
         System.out.print("May I have your name? ");
-        String userName = getString();
+        String userName = scanner.nextLine();
         System.out.println("Hello, " + userName + "!");
+
+        scanner.close();
     }
 }

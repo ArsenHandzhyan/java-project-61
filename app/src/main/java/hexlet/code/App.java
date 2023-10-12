@@ -6,10 +6,12 @@ import hexlet.code.games.GCD;
 import hexlet.code.games.Progression;
 import hexlet.code.games.Prime;
 
-import static hexlet.code.Utils.getString;
+import java.util.Scanner;
 
 public class App {
     public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
         System.out.print("""
                 Please enter the game number and press Enter:
                 1 - Greet
@@ -21,7 +23,7 @@ public class App {
                 0 - Exit
                 """);
         System.out.print("Your choice: ");
-        String input = getString();
+        String input = scanner.nextLine();
         switch (input) {
             case "1" -> Cli.greeting();
             case "2" -> Even.startPlay();
@@ -33,5 +35,6 @@ public class App {
             default -> System.out.println("You entered an invalid value: from 1 to "
                     + "6 to select a game and 0 to exit!\n");
         }
+        scanner.close();
     }
 }
