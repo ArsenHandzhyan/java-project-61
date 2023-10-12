@@ -5,7 +5,6 @@ import java.util.Scanner;
 public class Engine {
     private static final Scanner SCANNER = new Scanner(System.in);
     private static String playerName;
-    static String consoleInput;
 
     public static void run(String description, String[][] roundsData, int countNewGame) {
         String result = roundsData[countNewGame][0];
@@ -27,7 +26,7 @@ public class Engine {
     }
 
     private static void checkAnswerAndGetInput(String result, int count, String description, String[][] roundsData) {
-        consoleInput = SCANNER.nextLine();
+        String consoleInput = SCANNER.nextLine();
         System.out.println("Your answer: " + consoleInput);
         if (consoleInput.equals(result)) {
             printCorrectAnswer(count);

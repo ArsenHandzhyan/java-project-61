@@ -10,7 +10,6 @@ import java.util.Scanner;
 
 public class App {
     private static final Scanner SCANNER = new Scanner(System.in);
-    static String consoleInput;
     public static void main(String[] args) {
         System.out.print("""
                 Please enter the game number and press Enter:
@@ -23,7 +22,7 @@ public class App {
                 0 - Exit
                 """);
         System.out.print("Your choice: ");
-        consoleInput = SCANNER.nextLine();
+        String consoleInput = SCANNER.nextLine();
         switch (consoleInput) {
             case "1" -> Cli.greeting();
             case "2" -> Even.startPlay();
