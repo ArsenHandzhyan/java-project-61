@@ -1,10 +1,20 @@
 package hexlet.code;
 
 import java.util.Scanner;
+import java.util.function.Supplier;
 
 public class Engine {
     private static final Scanner SCANNER = new Scanner(System.in);
     private static String playerName;
+
+    public static void runGameRounds(String description,
+                                     Supplier<String[]> generateRoundData) {
+        String[] round1 = generateRoundData.get();
+        String[] round2 = generateRoundData.get();
+        String[] round3 = generateRoundData.get();
+        String[][] roundsData = {round1, round2, round3};
+        run(description, roundsData, 0);
+    }
 
     public static void run(String description, String[][] roundsData, int count) {
         String result = roundsData[count][0];

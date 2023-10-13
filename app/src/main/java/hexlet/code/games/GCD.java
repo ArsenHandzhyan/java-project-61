@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.run;
+import static hexlet.code.Engine.runGameRounds;
 import static hexlet.code.Utils.getRandomInt;
 
 public class GCD {
@@ -10,12 +10,9 @@ public class GCD {
     private static final int BOUND_MULTIPLIER = 20; // Ограничение вспомогательного множителя для чисел до
 
     public static void startPlay() {
-        String[] round1 = generateRoundData();
-        String[] round2 = generateRoundData();
-        String[] round3 = generateRoundData();
-        String[][] roundsData = {round1, round2, round3};
-        run(DESCRIPTION, roundsData, 0);
+        runGameRounds(DESCRIPTION, GCD::generateRoundData);
     }
+
 
     public static String[] generateRoundData() {
         int generatedGCD = getRandomInt(BOUND_GCD, MIN_NUMBER);
@@ -24,15 +21,7 @@ public class GCD {
         int num1 = generatedGCD * multiplayer1;  // Рассчитываем числа с учетом общего делителя
         int num2 = generatedGCD * multiplayer2;
         String expression = num1 + " " + num2;
-        String result = String.valueOf(getNumGCD(num1, num2));
+        String result = Integer.toString(generatedGCD);
         return new String[]{result, expression};
-    }
-
-    public static int getNumGCD(int num1, int num2) {
-        if (num2 == 0) {
-            return num1;
-        } else {
-            return getNumGCD(num2, num1 % num2);
-        }
     }
 }

@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.run;
+import static hexlet.code.Engine.runGameRounds;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Progression {
@@ -12,12 +12,9 @@ public class Progression {
     private static final int BOUND_START = 100;
 
     public static void startPlay() {
-        String[] round1 = generateRoundData();
-        String[] round2 = generateRoundData();
-        String[] round3 = generateRoundData();
-        String[][] roundsData = {round1, round2, round3};
-        run(DESCRIPTION, roundsData, 0);
+        runGameRounds(DESCRIPTION, Progression::generateRoundData);
     }
+
 
     public static String[] generateRoundData() {
         int generatedLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
@@ -43,8 +40,8 @@ public class Progression {
                 stringBuilder.append(".. ");
             }
         }
-        String result1 = stringBuilder.toString().trim();
-        String result2 = String.valueOf(progression[hiddenIndex]);
-        return new String[]{result1, result2};
+        String questions = stringBuilder.toString().trim();
+        String result = String.valueOf(progression[hiddenIndex]);
+        return new String[]{questions, result};
     }
 }
