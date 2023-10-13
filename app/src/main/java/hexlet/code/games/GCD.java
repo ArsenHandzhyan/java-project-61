@@ -13,7 +13,6 @@ public class GCD {
         runGameRounds(DESCRIPTION, GCD::generateRoundData);
     }
 
-
     public static String[] generateRoundData() {
         int generatedGCD = getRandomInt(BOUND_GCD, MIN_NUMBER);
         int multiplayer1 = getRandomInt(BOUND_MULTIPLIER, MIN_NUMBER);
@@ -21,7 +20,15 @@ public class GCD {
         int num1 = generatedGCD * multiplayer1;  // Рассчитываем числа с учетом общего делителя
         int num2 = generatedGCD * multiplayer2;
         String expression = num1 + " " + num2;
-        String result = Integer.toString(generatedGCD);
+        String result = String.valueOf(getNumGCD(num1, num2));
         return new String[]{result, expression};
+    }
+
+    public static int getNumGCD(int num1, int num2) {
+        if (num2 == 0) {
+            return num1;
+        } else {
+            return getNumGCD(num2, num1 % num2);
+        }
     }
 }
