@@ -27,6 +27,7 @@ public class Engine {
                 System.out.print("'" + input + "'" + "is wrong answer ;(. Correct answer was");
                 System.out.println("'" + result + "'");
                 System.out.println("Let's try again, " + playerName + "!");
+                continue;
             }
         }
         System.out.println("Congratulations, " + playerName + "!\n");
