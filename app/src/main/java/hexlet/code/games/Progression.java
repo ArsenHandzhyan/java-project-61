@@ -48,9 +48,9 @@ public class Progression {
                 stringBuilder.append(".. ");
             }
         }
-        String questions = stringBuilder.toString().trim();
+        String answer = stringBuilder.toString().trim();
         String result = getResult(progression[hiddenIndex]);
-        return new String[]{questions, result};
+        return new String[]{answer, result};
     }
 
     public static String getResult(int hiddenIndex) {
