@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.runGameRounds;
+import static hexlet.code.Engine.run;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Prime {
@@ -9,16 +9,19 @@ public class Prime {
     private static final int BOUND = 1000;
 
     public static void startPlay() {
-        runGameRounds(DESCRIPTION, Prime::generateRoundData);
+        String[] round1 = generateRoundData();
+        String[] round2 = generateRoundData();
+        String[] round3 = generateRoundData();
+        String[][] roundsData = {round1, round2, round3};
+        run(DESCRIPTION, roundsData);
     }
 
-
     public static String[] generateRoundData() {
-        int generatedNumber = getRandomInt(BOUND, MIN_NUMBER);
-        String questions = Integer.toString(generatedNumber);
+        int generatedNumber = getRandomInt(MIN_NUMBER, BOUND);
+        String answer = Integer.toString(generatedNumber);
         boolean isSimple = isSimple(generatedNumber);
-        String result = isSimple ? "yes" : "no";
-        return new String[]{result, questions};
+        String result = getResult(isSimple);
+        return new String[]{result, answer};
     }
 
     public static boolean isSimple(int number) {
@@ -31,5 +34,9 @@ public class Prime {
             }
         }
         return true;
+    }
+
+    public static String getResult(boolean isSimple) {
+        return isSimple ? "yes" : "no";
     }
 }

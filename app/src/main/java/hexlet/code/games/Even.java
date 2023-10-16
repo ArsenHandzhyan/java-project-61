@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.runGameRounds;
+import static hexlet.code.Engine.run;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Even {
@@ -9,13 +9,22 @@ public class Even {
     private static final int BOUND = 101;
 
     public static void startPlay() {
-        runGameRounds(DESCRIPTION, Even::generateRoundData);
+        String[] round1 = generateRoundData();
+        String[] round2 = generateRoundData();
+        String[] round3 = generateRoundData();
+        String[][] roundsData = {round1, round2, round3};
+        run(DESCRIPTION, roundsData);
     }
 
     private static String[] generateRoundData() {
-        int generatedNumber = getRandomInt(BOUND, MIN_NUMBER);
-        String result = generatedNumber % 2 == 0 ? "yes" : "no";
-        String questions = Integer.toString(generatedNumber);
-        return new String[]{result, questions};
+        int generatedNumber = getRandomInt(MIN_NUMBER, BOUND);
+        String result = getResult(generatedNumber);
+        String answer = Integer.toString(generatedNumber);
+        return new String[]{result, answer};
     }
+
+    private static String getResult(int generatedNumber) {
+        return generatedNumber % 2 == 0 ? "yes" : "no";
+    }
+
 }

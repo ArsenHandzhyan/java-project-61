@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.runGameRounds;
+import static hexlet.code.Engine.run;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Calc {
@@ -11,18 +11,21 @@ public class Calc {
     private static final int BOUND_NUMBER = 50;
 
     public static void startPlay() {
-        runGameRounds(DESCRIPTION, Calc::generateRoundData);
+        String[] round1 = generateRoundData();
+        String[] round2 = generateRoundData();
+        String[] round3 = generateRoundData();
+        String[][] roundsData = {round1, round2, round3};
+        run(DESCRIPTION, roundsData);
     }
 
-
     public static String[] generateRoundData() {
-        int generatedNumber1 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
-        int generatedNumber2 = getRandomInt(BOUND_NUMBER, MIN_NUMBER);
-        int generatedSign1 = getRandomInt(BOUND_SIGN, MIN_SIGN);
-        String sign = generateSign(generatedSign1);
-        String questions = generatedNumber1 + " " + sign + " " + generatedNumber2;
-        String result = String.valueOf(calculateExpression(generatedNumber1, generatedNumber2, sign));
-        return new String[]{result, questions};
+        int generatedNumber1 = getRandomInt(MIN_NUMBER, BOUND_NUMBER);
+        int generatedNumber2 = getRandomInt(MIN_NUMBER, BOUND_NUMBER);
+        int generatedSign = getRandomInt(MIN_SIGN, BOUND_SIGN);
+        String sign = generateSign(generatedSign);
+        String answer = generatedNumber1 + " " + sign + " " + generatedNumber2;
+        String result = getResult(generatedNumber1, generatedNumber2, sign);
+        return new String[]{result, answer};
     }
 
     public static String generateSign(int sign) {
@@ -41,5 +44,9 @@ public class Calc {
             case "*" -> num1 * num2;
             default -> throw new Error("Unknown expression!");
         };
+    }
+
+    public static String getResult(int generatedNumber1, int generatedNumber2, String sign) {
+        return String.valueOf(calculateExpression(generatedNumber1, generatedNumber2, sign));
     }
 }

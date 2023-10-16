@@ -1,6 +1,6 @@
 package hexlet.code.games;
 
-import static hexlet.code.Engine.runGameRounds;
+import static hexlet.code.Engine.run;
 import static hexlet.code.Utils.getRandomInt;
 
 public class Progression {
@@ -12,25 +12,33 @@ public class Progression {
     private static final int BOUND_START = 100;
 
     public static void startPlay() {
-        runGameRounds(DESCRIPTION, Progression::generateRoundData);
+        String[] round1 = generateRoundData();
+        String[] round2 = generateRoundData();
+        String[] round3 = generateRoundData();
+        String[][] roundsData = {round1, round2, round3};
+        run(DESCRIPTION, roundsData);
     }
-
 
     public static String[] generateRoundData() {
-        int generatedLength = getRandomInt(BOUND_LENGTH, MIN_NUMBER);
-        int generatedStartNumber = getRandomInt(BOUND_START, MIN_NUMBER);
-        int generatedStepNumber = getRandomInt(BOUND_STEP, STEP_START);
-        String[] results = generateQuestionForProgression(generatedLength, generatedStartNumber, generatedStepNumber);
-        String questions = results[0];
+        int generatedLength = getRandomInt(MIN_NUMBER, BOUND_LENGTH);
+        int generatedStartNumber = getRandomInt(MIN_NUMBER, BOUND_START);
+        int generatedStepNumber = getRandomInt(STEP_START, BOUND_STEP);
+        String[] results = generateQuestion(generatedLength, generatedStartNumber, generatedStepNumber);
+        String answer = results[0];
         String result = results[1];
-        return new String[]{result, questions};
+        return new String[]{result, answer};
     }
 
-    public static String[] generateQuestionForProgression(int lengthNumber, int startNumber, int stepNumber) {
+    public static int[] generateProgression(int lengthNumber, int startNumber, int stepNumber) {
         int[] progression = new int[lengthNumber];
         for (int i = 0; i < lengthNumber; i++) {
             progression[i] = startNumber + (i * stepNumber);
         }
+        return progression;
+    }
+
+    public static String[] generateQuestion(int lengthNumber, int startNumber, int stepNumber) {
+        int[] progression = generateProgression(lengthNumber, startNumber, stepNumber);
         int hiddenIndex = getRandomInt(progression.length, 0);
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < progression.length; i++) {
@@ -41,7 +49,11 @@ public class Progression {
             }
         }
         String questions = stringBuilder.toString().trim();
-        String result = String.valueOf(progression[hiddenIndex]);
+        String result = getResult(progression[hiddenIndex]);
         return new String[]{questions, result};
+    }
+
+    public static String getResult(int hiddenIndex) {
+        return String.valueOf(hiddenIndex);
     }
 }
