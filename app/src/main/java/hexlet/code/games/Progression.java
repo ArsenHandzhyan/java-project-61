@@ -39,7 +39,7 @@ public class Progression {
 
     public static String[] generateQuestion(int lengthNumber, int startNumber, int stepNumber) {
         int[] progression = generateProgression(lengthNumber, startNumber, stepNumber);
-        int hiddenIndex = getRandomInt(progression.length, 0);
+        int hiddenIndex = getRandomInt(0, progression.length);
         StringBuilder stringBuilder = new StringBuilder();
         for (int i = 0; i < progression.length; i++) {
             if (i != hiddenIndex) {
