@@ -23,8 +23,11 @@ public class Even {
         return new String[]{result, answer};
     }
 
+    private static boolean isEven(int generatedNumber) {
+        return generatedNumber % 2 == 0;
+    }
     private static String getResult(int generatedNumber) {
-        return generatedNumber % 2 == 0 ? "yes" : "no";
+        return isEven(generatedNumber) ? "yes" : "no";
     }
 
 }

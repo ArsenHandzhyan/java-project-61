@@ -19,24 +19,23 @@ public class Prime {
     public static String[] generateRoundData() {
         int generatedNumber = getRandomInt(MIN_NUMBER, BOUND);
         String answer = Integer.toString(generatedNumber);
-        boolean isSimple = isSimple(generatedNumber);
-        String result = getResult(isSimple);
+        String result = getResult(generatedNumber);
         return new String[]{result, answer};
     }
 
-    public static boolean isSimple(int number) {
-        if (number < 2) {
+    public static boolean isSimple(int generatedNumber) {
+        if (generatedNumber < 2) {
             return false;
         }
-        for (int i = 2; i <= Math.sqrt(number); i++) {
-            if (number % i == 0) {
+        for (int i = 2; i <= Math.sqrt(generatedNumber); i++) {
+            if (generatedNumber % i == 0) {
                 return false;
             }
         }
         return true;
     }
 
-    public static String getResult(boolean isSimple) {
-        return isSimple ? "yes" : "no";
+    public static String getResult(int generatedNumber) {
+        return isSimple(generatedNumber) ? "yes" : "no";
     }
 }
